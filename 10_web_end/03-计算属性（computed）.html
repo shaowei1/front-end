@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function(){
+            // 创建vue对象
+            var vm = new Vue({
+                // 获取
+                el: '#app',
+                // 设置变量
+                data: {
+                    str1: 'abcdef',
+                }, 
+                // 定义函数
+                methods: {
+                    fn: function(){
+                        var newStr = this.str1.split('').reverse().join('')
+                        return newStr
+                    }
+                },
+                // 计算属性: computed
+                computed: {
+                    // 可以自己设置想要使用的计算属性。
+                    reverseStr1: function(){
+                        var newStr = this.str1.split('').reverse().join('')
+                        return newStr
+                    },
+                    
+                }
+
+            })
+        }
+    </script>
+</head>
+<body>
+    
+    <ul id="app">
+        <!-- 如果一个逻辑操作某个变量太过复杂，可以使用函数。(也可以使用计算属性) -->
+
+        <li>我是一个字符串: {{ str1 }}</li>
+        <li>反转字符串: {{ str1.split('').reverse().join('') }}</li>
+        <li>逻辑如果比较复杂，可以使用函数: {{ fn() }}</li>
+        <li>计算属性: {{ reverseStr1 }}</li>
+
+    </ul>
+
+</body>
+</html>

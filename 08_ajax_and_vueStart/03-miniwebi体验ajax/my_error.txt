@@ -1,0 +1,6 @@
+# Problem1
+Resource interpreted as Stylesheet but transferred with MIME type text/plain: "".
+
+# Resolution
+css文件跟页面加载的内容对不上
+

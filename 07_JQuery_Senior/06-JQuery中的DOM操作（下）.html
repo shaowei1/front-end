@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+
+
+                var $newLi = $('<li class="aaa" id="bbb" name="ccc" title="ddd">I\'m a new li</li>')
+
+                // 添加 append() and appendTo()    // 功能一样，　参数调换位置，　向父元素中添加新子元素
+                // $("ul").append($newLi)
+                // $newLi.prependTo($("ul"))
+
+                // 兄弟：　after() and insertAfter() //　向参考节点后面添加一个新元素
+                // $(".box").after($newLi)      // 同时使用也只添加一条
+                $newLi.insertAfter($(".box"))
+
+                // 删除: remove()
+                // $(".box").remove() // who use delete who
+
+                // clone(true)/ replacewith() / replaceAll()
+
+
+            })
+        })
+    </script>
+</head>
+<body>
+
+<button>创建一个li标签</button>
+
+<ul>
+    <li name='aaa'>我是原生土著li1</li>
+    <li class="box">我是原生土著li2</li>
+    <li name='aaa'>我是原生土著li3</li>
+</ul>
+
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09_固定定位</title>
+    <style>
+
+        .box {
+            width: 800px;
+            height: 500px;
+            margin: auto;
+            position: relative;
+            background: #cccccc;
+        }
+
+        .box1 {
+            width: 200px;
+            height: 300px;
+            /*1.让子盒子,在父盒子中居中*/
+
+            position: absolute;
+            background: blue;
+            /*a.直接设置值*/
+            /*left: 300px;*/
+
+            /*b.实际开发*/
+            left: 50%;
+            /*向左移动盒子自身宽度的一半*/
+            margin-left: -100px;
+
+            /*1.透明度 opacity*/
+            /*opacity: 0.2;*/
+
+            /*处理ie8以上老版本不兼容
+            filter: alpha(opacity=20);*/
+            background: rgba(255, 0, 0, 0.2);
+        }
+
+        .box2 {
+            width: 200px;
+            height: 300px;
+            background: green;
+            position: absolute;
+            left: 400px;
+            z-index: 99;
+        }
+
+        .box3 {
+            height: 200px;
+            width: 300px;
+            background: red;
+            /*子绝父相*/
+            position: absolute;
+            left: 500px;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+<!-- 1.所有定位的盒子(非static), 那么默认层级都是0. -->
+<!-- 2.层级一样，难么后面的盒子比前面的盒子高。 -->
+<!-- 3.想要调整层级，可以使用z-index（必须是整数，必须带有定位）。 -->
+
+<div class="box">
+    <div class="box1">I'm box1</div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</div>
+</body>
+</html>

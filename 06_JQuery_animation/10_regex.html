@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>10_正则表达式</title>
+</head>
+<body>
+
+<script>
+
+
+    // 1.正则的定义。
+    var re1 = /^aaa$/ig;    // 后面的i和g代表的是参数: replace(/d/ig):  i:忽略大小写；   g:全局替换
+    // 方法   new RegExp('字符串.正则', '字符串.参数')
+    //          参数: i忽略大小写.
+    //          参数: g全局操作.
+    var re2 = new RegExp('^aaa$', 'ig')
+    // console.log(re1)
+    // console.log(re2)
+
+
+    // 2.使用正则: test();  返回一个boolean值。    正则.test(字符串)
+    // console.log(re1.test('aaa'))
+    // console.log(re1.test('aaaa'))
+
+
+    // 3.需要的时候，可以百度...
+
+
+    //用户名验证：(数字字母或下划线6到20位)
+    var reUser = /^\w{6,20}$/;
+
+    //邮箱验证：
+    var reMail = /^[a-z0-9][\w\.\-]*@[a-z0-9\-]+(\.[a-z]{2,5}){1,2}$/i;
+
+    //密码验证：
+    var rePass = /^[\w!@#$%^&*]{6,20}$/;
+
+    //手机号码验证：
+    var rePhone = /^1[34578]\d{9}$/;
+
+    // ２．使用
+    // 二、正则的使用  正则调用.test(参数是字符串)
+    //          看字符串是否满足正则，返回true或者false
+    var bool = /aaa/i.test("Aaabsdfafas")
+    console.log(bool)
+
+    var b = /^aaa$/i.test('aaA')
+    console.log(b)
+</script>
+
+
+</body>
+</html>

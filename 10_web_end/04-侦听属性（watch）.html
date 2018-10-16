@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function(){
+            // 定义vue对象
+            var vm = new Vue({
+                // 获取
+                el: '#app',
+                // 定义变量
+                data: {
+                    num: 1,
+                },
+                // 侦听属性: watch。
+                watch: {
+                    // 想要侦听哪个属性，都可以，直接写就行。
+                    num: function(newValue, oldValue){  // 参数是 变化后的值和变化前的值。
+                        // 添加什么逻辑，由程序员决定。
+                        console.log(newValue, '|', oldValue)
+                    }
+                }
+
+
+            })
+        }
+    </script>
+</head>
+<body>
+
+    <!-- 侦听属性: 某个变量的值，一旦发生变量，我们就要"采取措施". -->
+    <ul id="app">
+
+        <li @click='num+=1'> {{ num }} </li>
+
+    </ul>
+
+
+</body>
+</html>

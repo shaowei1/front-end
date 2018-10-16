@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04_数组去重</title>
+</head>
+<body>
+<script>
+    var oldArr = ['yang', 'xin', 'yue', 'yang']
+    var newArr = []
+
+    // first method
+    /*    for (var i = 0; i < oldArr.length; i++) {
+            if (newArr.indexOf(oldArr[i]) == -1) {
+                newArr.push(oldArr[i])
+            }
+        }*/
+
+    /* python
+    lst1 = list(1, 2, 3, 2, 1)
+    lst2 = list()
+    for i, value in enumerate(lst1):
+        if lst1.index(value) == i:
+            lst2.append(lst1)
+    */
+
+    // second method
+    for (var i = 0; i < oldArr.length; i++) {
+        // 查看元素(oldArr[i]的位置，和　i　
+        if (oldArr.indexOf(oldArr[i]) == i) {
+            newArr.push(oldArr[i])
+        }
+    }
+    console.log(oldArr)
+    console.log(newArr)
+</script>
+</body>
+</html>

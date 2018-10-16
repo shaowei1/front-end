@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_选择器上</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            // a.普通选择器；　id/class/label name/hierarchy
+            console.log($("#box2"))
+            console.log($(".aaa"))
+            console.log($("li"))
+            console.log($("#box1 a"))
+
+            // b.属性／过滤／索引值
+            console.log($("li[name=demo]")) // 根据属性值获取
+
+            var $ele1 = $("li").has('a') //根据是否包含参数标签获取
+            console.log($ele1)
+
+            var $ele2 = $("li").eq(2)   //　根据索引值获取
+            console.log($ele2)
+        })
+    </script>
+</head>
+<body>
+<ul id="box1">
+    <li name="demo">我是li标签1</li>
+    <li class="aaa">我是li标签2</li>
+    <li id="box2">我是li标签3</li>
+    <li class="aaa" name="demo">我是li标签4</li>
+    <li>
+        <a href="#" class="aaa" name="demo">我是ａ标签</a>
+    </li>
+</ul>
+</body>
+</html>

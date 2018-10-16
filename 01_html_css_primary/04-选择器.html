@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select</title>
+    <style>
+        /*
+        总结:
+        1.标签选择器: 直接写标签名
+        2.类选择器: 值的前面加点
+        3.id选择器: 值的前面加#
+
+         4.组选择器: 元素之间用逗号隔开
+        5.层级选择器: 元素之间用空格
+        6.伪类选择器: 获取元素:hover
+        */
+
+        div {
+            background: red;
+        }
+
+        /*id选择器: 就是在标签上添加id属性*/
+        #box {
+            /*颜色赋值: 单词 #ffffff; rgb(255,255,255)*/
+            background: blue;
+        }
+
+        /*组选择器: 用逗号隔开*/
+        #box, h1{
+            background: skyblue;
+        }
+
+        /*伪类选择器 当鼠标移动到上面是触发*/
+        h1:hover{
+            background: green;
+        }
+    </style>
+</head>
+<body>
+<div>我是div1</div>
+<div id="box">我是div2</div>
+<div>我是div3</div>
+
+<h1>我是标题</h1>
+
+</body>
+</html>

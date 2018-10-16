@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_自定义动画</title>
+    <style>
+        .box1 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 8px;
+            background: skyblue;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            top: 200px;
+            left: 8px;
+            background: red;
+        }
+
+    </style>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+            $("button").click(function () {
+                // 自定义动画: animate();   底层原理是定时器。
+                // animate参数：
+                //     参数一：要改变的样式属性值，写成字典的形式（必传）
+                //     参数二：动画持续的时间，单位为毫秒，一般不写单位
+                //     参数三：动画曲线，默认为‘swing’，缓冲运动，还可以设置为‘linear’，匀速运动
+                //     参数四：动画回调函数，动画完成后执行的匿名函数
+
+                // parameter11: dictionary
+                // var ojb = {'width': 500, 'height': 500, left: 500}
+                var obj = {'width': 600}
+
+                // $(".box1").animate(ojb)
+                // $(".box1").animate(obj, 5000)
+
+                $(".box1").animate(obj, 2000, function () {
+
+                    alert("animation is stop")
+                }) // 第四个参数是: 回调函数(动画执行完毕以后在执行回调函数)
+
+
+                // 定时器和主程序可以理解为异步执行。
+                alert("和主程序几乎同时进行")
+
+            })
+        })
+    </script>
+</head>
+<body>
+<button>自定义动画</button>
+<div class="box1"></div>
+<div class="box2"></div>
+</body>
+</html>

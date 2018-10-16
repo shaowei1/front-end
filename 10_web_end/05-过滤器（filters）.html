@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function(){
+            // 设置一个全局过滤器一定放在最顶端。 filter
+            Vue.filter('Yuan', function(num){
+                // 判断，如果传过来的数值为0，就不用添加了。不为0添加元/每斤
+                if(num == 0){
+                    return num
+                }else{
+                    return num + "元/每斤"
+                }
+            })
+
+            // 在设置一个
+            Vue.filter('RMB', function(num){
+                // 判断，如果传过来的数值为0，就不用添加了。不为0添加元/每斤
+                if(num == 0){
+                    return num
+                }else{
+                    return '¥ ' + num
+                }
+            })
+
+
+
+            // 创建vue对象
+            var vm1 = new Vue({
+                // 获取
+                el: '#app1',
+                // 定义变量
+                data: {
+                    money1: 4,
+                    money2: 0,
+                },
+                // // 过滤器: 对所施加的变量，进行过滤添加功能。 filters
+                // filters: {
+                //     // 定义第一个过滤器
+                //     Yuan: function(num){
+                //         // 判断，如果传过来的数值为0，就不用添加了。不为0添加元/每斤
+                //         if(num == 0){
+                //             return num
+                //         }else{
+                //             return num + "元/每斤"
+                //         }
+                //     }
+                // }
+
+            })
+
+
+
+            // 创建vue对象
+            var vm2 = new Vue({
+                // 获取
+                el: '#app2',
+                // 定义变量
+                data: {
+                    money1: 4,
+                    money2: 0,
+                },
+
+            })
+        }
+    </script>
+</head>
+<body>
+    <!-- 需求: 所有的人民币加上 元/每斤(0元的不用加) -->
+    <!-- 过滤器: 把所有的数值，尽行过滤，等于0的不用加。不等于的加元/每斤 -->
+
+    <ul id="app1">
+        水果区:
+        <li>大苹果: {{ money1 | Yuan | RMB }}</li>
+        <li>食品袋: {{ money2 | Yuan | RMB }}</li>
+    </ul>
+
+
+    <ul id="app2">
+        熟食区:
+        <li>酱牛肉: {{ money1 | Yuan | RMB }}</li>
+        <li>食品袋: {{ money2 | Yuan | RMB }}</li>
+    </ul>
+
+</body>
+</html>

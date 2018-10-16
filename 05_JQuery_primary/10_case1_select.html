@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10_案例一＿选择器</title>
+    <style>
+        .left, .right {
+            position: fixed;
+            top: 250px;
+        }
+
+        .left {
+            left: 0;
+        }
+
+        .right {
+            right: 0;
+        }
+
+        .left span, .right span {
+            width: 20px;
+            height: 20px;
+            background: #cccccc;
+            font-size: 14px;
+            cololr: #333;
+            position: absolute;
+            right: 0;
+            top: 0;
+            text-align: center;
+            cursor: pointer;
+        }
+    </style>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            /*               $('.left span').click(function () {
+                            $(".left").hide()   // hide(隐藏），show()显示
+                        })
+                        $('.right span').click(function () {
+                            $(".right").hide()
+                        })*/
+
+
+            $("div span").click(function () {
+                // this－－＞被事件触发的对象
+                // console.log(this)
+                // this 代指js对象，如何转换为JQuery对象 $(js对象）－－＞JQuery对象
+                $(this).parent().hide()
+            })
+        })
+
+    </script>
+</head>
+<body>
+
+<div class="left">
+    <img src="images/left.jpg" alt="">
+    <span src="aaa">X</span>
+</div>
+<div class="right">
+    <img src="images/right.jpg" alt="">
+    <span class="bbb">X</span>
+</div>
+</body>
+</html>

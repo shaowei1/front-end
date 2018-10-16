@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>11_样式操作</title>
+    <style>
+        div {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+
+        }
+    </style>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            // js控制样式：行内，内嵌，外链
+            // JQuery: style-->css()    className-->add/ remove /toggleclass()
+
+            $("div").click(function () {
+                // 3.1 style-->css
+                // a.一个参数：获取值
+                console.log($(this).css('width'))
+
+                // b .两个参数，修改值
+                $(this).css('width', '300px')
+
+                // c.　一个参数：　参数是字典，赋值
+                var obj = {'width': 500, 'height': 500, 'background': 'red'}
+                $(this).css(obj)
+
+                //3.2 className--> add/remove/ toggleclass()
+                $(this).addClass('ynngs')
+
+                $(this).removeClass('aaa')
+
+                $(this).toggleClass('bbb')
+
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="box aaa bbb"></div>
+
+</body>
+</html>

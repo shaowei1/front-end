@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06_JQuery_experience</title>
+    <style>
+        div {
+            display: none;
+            height: 180px;
+            margin: 20px;
+            text-align: center;
+            font: 40px/180px 'simsun';
+            background: skyblue;
+        }
+    </style>
+    <!--    <script>
+            // 原生JS实现：　显示盒子，设置内容
+            window.onload = function () {
+                var btn = document.getElementById('btn')
+                var divArr = document.getElementsByTagName('div')
+
+                btn.onclick = function () {
+                    for (var i = 0; i < divArr.length; i++) {
+                        divArr[i].style.display = 'block'
+                        divArr[i].innerHTML = '我自长刀向天笑，　独留肝胆两昆仑'
+                    }
+                }
+
+            }
+        </script>-->
+     <!--一般写的时候不适用min，因为被压缩不利于分析，正式上线的时候使用min-->
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("#btn").click(function () {
+                $("div").show().html("花间一壶酒，独酌无相亲")
+            })
+        })
+    </script>
+</head>
+<body>
+<button id="btn">显示内容</button>
+<div></div>
+<div></div>
+<div></div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            // 生成Vue对象
+            var vm = new Vue({
+                // 获取
+                el: '#app',
+                // 定义变量
+                data: {
+                    arr: ['西施浣纱', '昭君出塞', '贵妃醉酒', '貂蝉拜月'],
+                    obj: {'name': '张三', 'age': 18, 'address': '三里屯'},
+                    arr2: ['xizi', 'xiaojia', 'yue'],
+                    obj2: {'name': 'jia', 'age': 20, 'address': 'henan'},
+                }
+
+            })
+
+        }
+    </script>
+</head>
+<body>
+
+<div id="app">
+    <!-- v-for的功能: 循环生成很多的标签。 -->
+
+    <ul>
+        <!-- 1.值可以是数组或者对象。单个变量遍历。 -->
+        <!-- v-for遍历数组的时候i代表的是: 元素 -->
+        <li v-for="i in arr"> {{ i }}</li>
+        <!-- v-for遍历对象的时候i代表的是: 键值对中的值 -->
+        <li v-for="i in obj"> {{ i }}</li>
+
+        <!-- 2.值可以是数组或者对象。两个变量遍历。 -->
+        <!-- v-for遍历数组的时候i代表的是: 元素 -->
+        <!-- v-for遍历数组的时候j代表的是: 索引值 -->
+        <li v-for="(i,j) in arr"> {{ i }} : {{ j }}</li>
+        <!-- v-for遍历对象的时候i代表的是: 键值对中的值 -->
+        <!-- v-for遍历对象的时候j代表的是: 键值对中的键 -->
+        <li v-for="i,j in obj"> {{ i }} : {{ j }}</li>
+
+    </ul>
+    <br>
+    <br>
+
+    <ol>
+        <li v-for="i, j in arr2">{{ i }}: {{j}}</li>
+        <br>
+        <br>
+        <li v-for="i, j in obj2">{{ j }}: {{i}}</li>
+    </ol>
+
+</div>
+
+
+</body>
+</html>

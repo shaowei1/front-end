@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(document).ready(function () {
+            // JQuery中的DOM操作分为：　创建/添加／删除／复制／替换
+
+            // 绑定点击事件
+            $("button").click(function () {
+                // 1.创建 html();    $()
+                // var $newLi = $('<li>')  //<'li'> 创建，　'li'是获取
+                // $newLi.addClass = 'aaa'
+                // $newLi.html("I'm a new li label")
+                // console.log($newLi)
+
+                // 多属性及多标签
+                var $newLi = $('<li class="aaa" id="bbb" name="ccc" title="ddd">I\' m a new li</li>')
+
+                // 2. 添加    append() 向父元素中添加新子元素
+                $("ul").append($newLi)
+            })
+        })
+
+    </script>
+</head>
+<body>
+
+<button>创建一个li标签</button>
+
+<ul>
+    <li>我是原生土著li1</li>
+    <li class="box">我是原生土著li2</li>
+    <li>我是原生土著li3</li>
+</ul>
+
+
+</body>
+</html>

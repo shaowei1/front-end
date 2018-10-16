@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>todolist</title>
+	<style type="text/css">
+		.list_con{
+			width:600px;
+			margin:50px auto 0;
+		}
+		.inputtxt{
+			width:550px;
+			height:30px;
+			border:1px solid #ccc;
+			padding:0px;
+			text-indent:10px;			
+		}
+		.inputbtn{
+			width:40px;
+			height:32px;
+			padding:0px;
+			border:1px solid #ccc;
+		}
+		.list{
+			margin:0;
+			padding:0;
+			list-style:none;
+			margin-top:20px;
+		}
+		.list li{
+			height:40px;
+			line-height:40px;
+			border-bottom:1px solid #ccc;
+		}
+
+		.list li span{
+			float:left;
+		}
+
+		.list li a{
+			float:right;
+			text-decoration:none;
+			margin:0 10px;
+		}
+	</style>
+	<script src="js/vue.js"></script>
+	<script>
+		window.onload = function(){
+			// 思路: 1.属性中定义数组。  2.方法中定义逻辑。  3.标签上v-for循环遍历  4.事件绑定、v-model
+			
+			var vm = new Vue({
+				// 获取
+				el: '.list_con',
+				// 定义变量
+				data: {
+					// 1.属性中定义数组。 
+					arr: [
+						'学习html', '学习css', '学习javascript', '学习JQuery',
+					],
+					str1: '',
+				},
+				// 定义方法
+				methods: {
+					// 2.方法中定义逻辑。
+
+					// a.添加数据
+					add_data: function(){
+						// bug: 内容不能为空
+						if(this.str1 == ''){
+							alert('内容不能为空')
+							return
+						}
+
+						// 添加数据的思路: 拿到input的值，添加到数组中。
+						// alert(this.str1)
+						this.arr.splice(0, 0, this.str1)
+						// 清空内容
+						this.str1 = ''
+					},
+
+
+					// b.删除数据
+					del_data: function(index){
+						// 删除元素可以根据索引值进行删除。（从数组中删除）
+						// alert(index)
+						this.arr.splice(index, 1)
+					},
+
+
+					// c.向上移动
+					up_data: function(index){
+						// bug: 如果是第一个就不要在移动了
+						if(index == 0){
+							alert('已经是第一个了')
+							return;
+						}
+
+						// 向上移动思路: 操作数组。先删除，后添加。
+						// 1.删除(被删除的元素会设置为返回值,放入一个数组中)
+						var eleArr = this.arr.splice(index, 1)
+						// 2.添加
+						this.arr.splice(index-1, 0, eleArr[0])
+					},
+
+
+					// d.向下移动。
+					down_data: function(index){
+						// bug: 最后一项，就不要移动了。
+						if(index == this.arr.length-1){
+							alert('已经是最后一项了')
+							return;
+						}
+						// 思路: 和向上移动，逻辑相反。
+						// 1.删除(被删除的元素会设置为返回值,放入一个数组中)
+						var eleArr = this.arr.splice(index, 1)
+						// 2.添加，添加到后一个元素的后面。
+						this.arr.splice(index+1, 0, eleArr[0])
+						
+					},
+
+				}
+			})
+
+		}
+	</script>
+</head>
+<body>
+
+	<div class="list_con">
+		<h2>To do list</h2>
+		<input type="text" name="" id="txt1" class="inputtxt" v-model='str1'>
+		<input type="button" name="" value="增加" id="btn1" class="inputbtn" @click='add_data()'>
+		<!-- 写好了往ul中放入 -->
+		<ul id="list" class="list">
+			<!-- 删除、↑、↓都是a链接，只不过类名不同 -->
+			<!-- class = del/up/down -->
+			<!-- <li><span>学习html</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down"> ↓ </a><a href="javascript:;" class="del">删除</a></li> -->
+			<!-- <li><span>学习css</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down"> ↓ </a><a href="javascript:;" class="del">删除</a></li> -->
+			<!-- <li><span>学习javascript</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down"> ↓ </a><a href="javascript:;" class="del">删除</a></li> -->
+
+			<!-- 3.标签上v-for循环遍历  -->
+			<li v-for='i,j in arr'>
+				<span>{{i}}</span>
+				<a href="javascript:;" class="up" @click='up_data(j)'> ↑ </a>		<!--javascript:;表示点了也白点，这个链接不会刷新和跳转，-->
+				<a href="javascript:;" class="down" @click='down_data(j)'> ↓ </a>
+				<a href="javascript:;" class="del" @click='del_data(j)'>删除</a>
+			</li>
+
+		</ul>
+
+	</div>
+</body>
+</html>

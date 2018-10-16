@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>10_定时器制作动画</title>
+    <style>
+        * {
+            padding: 0px;
+            margin: 0px;
+            list-style: none;
+        }
+
+        #box {
+            width: 10%;
+            height: 100px;
+            background: skyblue;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+            text-align: center;
+            line-height: 100px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            // demand1 : 一直忘右走
+            // demand2 : 往返来回走
+
+            var box = document.getElementById('box')
+
+            var num = 0
+            var step = -5
+            var btn1 = document.getElementById('start')
+            var btn2 = document.getElementById('stop')
+
+            var timers = []
+            var count = 0
+
+            btn1.onclick = function () {
+                // alert('1')
+                // count += 1
+                // var str = 'timer' + count
+
+                // 一般返回一个负值
+                var timer = setInterval(function () {
+
+                    num += step
+                    // set
+                    if (num < 0) {
+                        step = 5
+                    }
+                    if (num > 500) {
+                        step = -5
+                    }
+                    box.style.left = num + 'px'
+
+                }, 20)
+                timers.push(timer)
+            }
+            btn2.onclick = function () {
+                // alert('2')
+                for (var i = 0; i < timers.length; i++) {
+                    clearInterval(timers[i])
+                    timers.pop(timers[i])
+
+                }
+            }
+
+        }
+    </script>
+</head>
+<body>
+<div id="box">
+    杨
+</div>
+<button id="start">开启定时器</button>
+
+<button id="stop">清除定时器</button>
+</body>
+</html>

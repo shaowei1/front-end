@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_定时器概述</title>
+</head>
+<body>
+<button id="btn1">setInterval循环定时器</button>
+<button id="btn2">setTimeout炸弹定时器</button>
+<br>
+<br>
+<button id="btn3">清除setInterval定时器</button>
+<button id="btn4">清除setTimeout定时器</button>
+
+<script>
+    //timer: 固定一段时间指定一段程序，
+
+    // setInterval(函数，毫秒值），setTimeout(函数，毫秒值）
+
+    // 演示定时器：获取元素，绑定事件
+    var btn1 = document.getElementById('btn1')
+    var btn2 = document.getElementById('btn2')
+    var btn3 = document.getElementById('btn3')
+    var btn4 = document.getElementById('btn4')
+    //定义全局变量，存储定时器编号
+    var timer1 = null
+    var timer2 = null
+
+    // 绑定事件
+    // 循环定时器：刷新页面的某一部分
+    btn1.onclick = function () {
+        // alert(1)
+        //　匿名函数，开启定时器
+        timer1 = setInterval(function () {
+            console.log('我是循环定时器...')
+        }, 1000)
+
+    }
+
+    // 炸弹定时器：用于延迟操作
+    btn2.onclick = function () {
+        // alert(2)
+        timer2 = setTimeout(fn, 2000)
+
+        function fn() {
+            console.log('我是炸弹定时器!')
+
+        }
+
+    }
+
+    // 清除定时器：clearInterval(定时器名字）／clearTimeout（定时器名字）
+    btn3.onclick = function () {
+        // alert(3)
+        clearInterval(timer1)
+    }
+    btn4.onclick = function () {
+        // alert(4)
+        clearTimeout(timer1)
+    }
+
+</script>
+</body>
+</html>

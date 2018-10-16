@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function(){
+            // ajax 有两种使用场景 1. 页面加载的时候，去后台获取数据，2. 电击按钮，发送异步请求
+
+            //1
+            $.ajax({
+                url: '/index_data', // 后台人员写好的一个功能方法，　form action
+                type: 'GET',         // GET/POST form method
+                dataType: 'json',
+                data: {'username': 'yangxinyue', 'password': '123123'}, // 请求体：传递给后台，服务器里的信息
+                success: function(dat){
+                    console.log(dat)
+                },
+                error: function(){
+                    alert('web error') 
+                },
+            })
+
+            //2
+            $('button').click(function(){
+                // 点击按钮之后才进一步提交，刷新页面一部分 
+                $.ajax({
+                    url: '/index_data',     
+                    type: 'GET',
+                    dataType: 'json',   // 返回的数据，希望转换成什么类型； json->object,  text->string
+                    data: {'username': 'miss', 'password': '123123'},
+                    success: function(dat){
+                        console.log(dat)
+                    },
+                    error: function(){
+                        alert('web server')
+                    }
+
+
+                })
+            })
+        })
+    </script>
+</head>
+<body>
+    <button>点击按钮，刷新页面一部分</button>
+
+    <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
+
+</body>
+</html>

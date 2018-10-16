@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_WebPage_Repalcement_skin</title>
+    <script>
+        window.onload = function () {
+            // 需求1: 点击按钮1，改变link标签的href属性: css/skin1.css
+            // 需求2: 点击按钮2，改变link标签的href属性: css/skin2.css
+
+            //需求1: click btn1, 改变link标签的href属性
+            // 1.获取事件源及相关元素
+            // 2.绑定事件
+            // 3.在电击事件触动后,更换路径
+
+            var mylink = document.getElementById('mylink');
+            var btn1 = document.getElementById('btn1');
+            var btn2 = document.getElementById('btn2');
+
+            btn1.onclick = function () {
+                mylink.href = 'css/skin1.css'
+            };
+            btn2.onclick = function () {
+                mylink.href = 'css/skin2.css'
+            };
+        };
+    </script>
+
+    <link rel="stylesheet" href="css/skin1.css" id="mylink">
+</head>
+<body>
+<h1>WebPage Skin</h1>
+<button id="btn1">Skin1</button>
+<button id="btn2">Skin2</button>
+
+</body>
+</html>

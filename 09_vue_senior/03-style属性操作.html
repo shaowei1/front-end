@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            var vm = new Vue({
+                el: '#app',
+                data: {
+                    str1: '100px',
+                    str2: '200px',
+                    str3: 'red',
+
+                    obj1: {
+                        width: '200px',
+                        height: '200px',
+                        'background-color': 'skyblue',  // 以为vue不识别-所以使用字符串
+                    },
+
+                    obj2: {
+                        height: '300px',
+                        width: '300px',
+                        'background-color': 'green',
+                    },
+
+                },
+            })
+        }
+    </script>
+</head>
+
+<body>
+<div id="app">
+
+    <!--1.放入对象-->
+    <div v-bind:style="{'width': str1, 'height': str2, 'background-color': str3 }">我是对象类型</div>
+    <div :style="obj1">我是对象类型２</div>
+
+    <!--2. 放入数组-->
+    <div :style="[obj1, obj2]">我是数组类型</div>
+
+</div>
+
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .aaa {
+            width: 100px;
+            height: 100px;
+            background: red;
+        }
+
+        .bbb {
+            width: 100px;
+            height: 100px;
+            background: #ccc;
+        }
+
+        .ccc {
+            width: 100px;
+            height: 100px;
+            background: green;
+        }
+
+        .ddd {
+            width: 100px;
+            height: 100px;
+            background: blue;
+        }
+
+    </style>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            var vm = new Vue({
+                // 获取
+                el: "#app",
+                // 定义变量
+                data: {
+                    classData1: 'aaa',
+                    classData2: 'bbb',
+
+                    bool1: true,
+                    bool2: false,
+
+                    obj1: {
+                        'ccc': false,
+                        'ddd': true,
+                    },
+                    obj2: {
+                        'eee': false,
+                        'fff': true,
+                    },
+                },
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="app">
+
+    <!--１．单个值-->
+    <div class="current" v-bind:class="classData1"> 我是单个值　</div>
+
+    <!--2.对象值：对象的属性未来有可能会变成class的值，　取决于对象中属性的值-->
+    <div :class="{'ccc': bool1, 'ddd': bool2}">我是对象值１</div>
+    <div :class="obj1">我是对象值２</div>
+
+    <div :class="[classData1, classData2, obj1, obj2]">我是数组值１</div>
+    <div :class="[classData1, obj1, bool2==true?'active1':'active2']">我是数组值２</div>
+</div>
+</body>
+</html>

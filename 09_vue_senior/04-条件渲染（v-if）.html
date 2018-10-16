@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        window.onload = function () {
+            Vue.directive('focus', {
+                inserted: function (e1) {
+                    e1.focus()
+                }
+            })
+            var vm = new Vue({
+                // 获取
+                el: '#app',
+                // 定义变量
+                data: {
+                    input1: '',
+                    bool1: true,
+                    bool2: false,
+                    str1: '四',
+                    judge: 0,
+                }
+            })
+
+        }
+    </script>
+</head>
+<body>
+
+<div id="app">
+    <!-- v-if语句本身的功能就是: 显示和隐藏盒子。 -->
+
+    <!-- 1.v-if，值如果是true就显示盒子，否则就隐藏盒子。 -->
+    <!-- 2.v-if v-else，值如果是true就显示盒子，否则就显示另外一个盒子。 -->
+    <!-- 3.v-if v-else-if ... v-else，多选一。 -->
+    <!-- 4.v-show，值是true就显示，否则就隐藏(页面中永远存在标签)。 -->
+
+
+    <!-- 1.v-if，值如果是true就显示盒子，否则就隐藏盒子。 -->
+    <div v-if="bool1">1. 我是v-if语句的测试内容。</div>
+
+    <!-- 2.v-if v-else，值如果是true就显示盒子，否则就显示另外一个盒子。 -->
+    <div v-if="bool2">2.1 v-if 值如果是true就显示盒子，否则就显示另外一个盒子</div>
+    <div v-else>2.2 v-else，值如果是true就显示盒子，否则就显示另外一个盒子</div>
+
+    <!-- 3.v-if v-else-if ... v-else，多选一。 -->
+    <div v-if="str1=='一'">3.1 v-if 多选一(一)</div>
+    <div v-else-if="str1=='二'">3.2 v-else-if 多选一(二)</div>
+    <div v-else-if="str1=='三'">3.3 v-else-if 多选一(三)</div>
+    <div v-else>3.3 v-else 多选一(不是一二三)</div>
+
+
+    <!-- 4.v-show，值是true就显示，否则就隐藏(页面中永远存在标签),但是v-else, v-if会删除标签。 -->
+    <div v-show='bool2'>4. 我是v-show的内容</div>
+
+
+    <!--my test-->
+    <input v-focus type="text" name="" class="inputtext" v-model="input1">
+
+    <div v-if="input1=='0'">equal 0</div>
+    <div v-else-if="input1>0">greater than 0</div>
+    <div v-else-if="input1<0">less than 0</div>
+    <div v-else>not a number</div>
+
+    <div v-show="input1">dragon</div>
+</div>
+
+
+</body>
+</html>

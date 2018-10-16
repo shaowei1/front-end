@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_字符串ａｐｉ</title>
+</head>
+<body>
+<script>
+    // 查看／切割／截取／反转／替换
+    var str = 'abcdefg';
+
+    // indexof
+    console.log(str.indexOf('bcd')) //返回第一个元素的索引值
+    console.log(str.indexOf('bd'))  // -1
+
+    // split
+    console.log(str.split('d')) // 'd' will not display in string
+    console.log(str.split(''))
+
+    // substring
+    console.log(str.substring(1, 4))    //[)
+    console.log(str.slice(1, 4))    //[)
+
+    // reverse
+    console.log(str.split('').reverse().join(''))
+
+    // replace()
+    var newStr = str.replace('d', 'D')
+    console.log(newStr)
+</script>
+</body>
+</html>

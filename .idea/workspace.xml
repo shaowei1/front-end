@@ -1,0 +1,477 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="844bade5-3c56-4fac-99a9-28d7e59a4031" name="Default Changelist" comment="" />
+    <ignored path="$PROJECT_DIR$/.tmp/" />
+    <ignored path="$PROJECT_DIR$/temp/" />
+    <ignored path="$PROJECT_DIR$/tmp/" />
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+  </component>
+  <component name="FUSProjectUsageTrigger">
+    <session id="245142014">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="12" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.24" value="1" />
+          <entry key="project.open.time.26" value="1" />
+          <entry key="project.open.time.27" value="2" />
+          <entry key="project.open.time.28" value="1" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.33" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.8" value="1" />
+          <entry key="project.opened" value="12" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="css" value="5" />
+          <entry key="html" value="48" />
+          <entry key="js" value="1" />
+          <entry key="md" value="1" />
+          <entry key="ts" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CSS" value="5" />
+          <entry key="HTML" value="46" />
+          <entry key="JavaScript" value="1" />
+          <entry key="PLAIN_TEXT" value="1" />
+          <entry key="Scratch" value="2" />
+          <entry key="TypeScript" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="css" value="54" />
+          <entry key="html" value="23554" />
+          <entry key="js" value="21" />
+          <entry key="md" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="CSS" value="54" />
+          <entry key="HTML" value="23530" />
+          <entry key="JavaScript" value="21" />
+          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="Scratch" value="24" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.vcs.git.usages" />
+    </session>
+    <session id="355389380">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="1" />
+          <entry key="project.open.time.12" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="html" value="25" />
+          <entry key="md" value="1212" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="HTML" value="27" />
+          <entry key="Markdown" value="1210" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.js.language.service.starts" />
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="HTML" value="1" />
+          <entry key="Markdown" value="4" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.vcs.git.usages" />
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="html" value="1" />
+          <entry key="md" value="4" />
+        </counts>
+      </usages-collector>
+    </session>
+  </component>
+  <component name="FileEditorManager">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="JavaScript File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>pros</find>
+      <find>prostitution</find>
+    </findStrings>
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/first/1.html" />
+        <option value="$PROJECT_DIR$/first/01-struct.html" />
+        <option value="$PROJECT_DIR$/first/css/first_css.css" />
+        <option value="$PROJECT_DIR$/first/select.html" />
+        <option value="$PROJECT_DIR$/first/three_css.html" />
+        <option value="$PROJECT_DIR$/first/css/main.css" />
+        <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/first/index.html" />
+        <option value="$PROJECT_DIR$/first/02_列表标签(3种).html" />
+        <option value="$PROJECT_DIR$/first/03_表单.html" />
+        <option value="$PROJECT_DIR$/first/04-选择器.html" />
+        <option value="$PROJECT_DIR$/first/05_盒子模型(上).html" />
+        <option value="$PROJECT_DIR$/first/06_盒子模型(中).html" />
+        <option value="$PROJECT_DIR$/first/07-盒子模型(下).html" />
+        <option value="$PROJECT_DIR$/first/08-css初始化.html" />
+        <option value="$PROJECT_DIR$/first/01_相对路径和绝对路径.html" />
+        <option value="$PROJECT_DIR$/third/01_显示隐藏盒子.html" />
+        <option value="$PROJECT_DIR$/third/02-css元素溢出的处理.html" />
+        <option value="$PROJECT_DIR$/third/03-浮动.html" />
+        <option value="$PROJECT_DIR$/third/04-表格(上).html" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.html" />
+        <option value="$PROJECT_DIR$/third/05-表格(中).html" />
+        <option value="$USER_HOME$/Desktop/1.html" />
+        <option value="$PROJECT_DIR$/third/07_Relative_positioning.html" />
+        <option value="$PROJECT_DIR$/third/08_absolute_positioning.html" />
+        <option value="$PROJECT_DIR$/third/09_fixed_positioning.html" />
+        <option value="$PROJECT_DIR$/third/10_positioning_expand.html" />
+        <option value="$PROJECT_DIR$/third/11_css权重.html" />
+        <option value="$PROJECT_DIR$/03_javascript/js/demo.js" />
+        <option value="$PROJECT_DIR$/03_javascript/01_javascript书写位置.html" />
+        <option value="$PROJECT_DIR$/03_javascript/js/01_js基本语法规范.html" />
+        <option value="$PROJECT_DIR$/03_javascript/00_javascript书写位置.html" />
+        <option value="$PROJECT_DIR$/03_javascript/02_函数.html" />
+        <option value="$PROJECT_DIR$/03_javascript/02_函数_judge.html" />
+        <option value="$PROJECT_DIR$/03_javascript/03_获取元素.html" />
+        <option value="$PROJECT_DIR$/03_javascript/05_操作标签属性.html" />
+        <option value="$PROJECT_DIR$/03_javascript/06_事件驱动.html" />
+        <option value="$PROJECT_DIR$/03_javascript/07_网页更换皮肤.html" />
+        <option value="$PROJECT_DIR$/03_javascript/08_打印名片.html" />
+        <option value="$PROJECT_DIR$/01_html_css_primary/README.md" />
+        <option value="$PROJECT_DIR$/02_html_css_Senior/README.md" />
+        <option value="$PROJECT_DIR$/03_js_Primary/README.md" />
+        <option value="$PROJECT_DIR$/07_JQuery_Senior/README.md" />
+        <option value="$PROJECT_DIR$/07_JQuery_Senior/10-JSON.html" />
+        <option value="$PROJECT_DIR$/08_ajax_and_vueStart/README.md" />
+      </list>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="712" />
+    <option name="y" value="25" />
+    <option name="width" value="654" />
+    <option name="height" value="743" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="the_front_end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="the_front_end" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="the_front_end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="the_front_end" type="462c0819:PsiDirectoryNode" />
+              <item name="07_JQuery_Senior" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="the_front_end" type="b2602c69:ProjectViewProjectNode" />
+              <item name="the_front_end" type="462c0819:PsiDirectoryNode" />
+              <item name="08_ajax_and_vueStart" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+      <pane id="Scope" />
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SearchEverywhereHistoryKey" value="java&#9;null&#9;null" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="HTML" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+    <property name="settings.editor.selected.configurable" value="preferences.general" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/03_javascript" />
+      <recent name="$PROJECT_DIR$/first" />
+    </key>
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.08_打印名片.html">
+    <configuration name="03_获取元素.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebstormProjects/03_javascript/03_获取元素.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="05_操作标签属性.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebstormProjects/03_javascript/05_操作标签属性.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="06_事件驱动.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebstormProjects/03_javascript/06_事件驱动.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="07_网页更换皮肤.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebstormProjects/03_javascript/07_网页更换皮肤.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="08_打印名片.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/WebstormProjects/03_javascript/08_打印名片.html">
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="JavaScript Debug.03_获取元素.html" />
+      <item itemvalue="JavaScript Debug.05_操作标签属性.html" />
+      <item itemvalue="JavaScript Debug.06_事件驱动.html" />
+      <item itemvalue="JavaScript Debug.07_网页更换皮肤.html" />
+      <item itemvalue="JavaScript Debug.08_打印名片.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.08_打印名片.html" />
+        <item itemvalue="JavaScript Debug.07_网页更换皮肤.html" />
+        <item itemvalue="JavaScript Debug.06_事件驱动.html" />
+        <item itemvalue="JavaScript Debug.05_操作标签属性.html" />
+        <item itemvalue="JavaScript Debug.03_获取元素.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="844bade5-3c56-4fac-99a9-28d7e59a4031" name="Default Changelist" comment="" />
+      <created>1534483825923</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1534483825923</updated>
+      <workItem from="1534483828774" duration="425000" />
+      <workItem from="1534484276847" duration="6947000" />
+      <workItem from="1537626015143" duration="8894000" />
+      <workItem from="1537703861510" duration="10904000" />
+      <workItem from="1537834548400" duration="12837000" />
+      <workItem from="1537863321835" duration="3796000" />
+      <workItem from="1537927336294" duration="10837000" />
+      <workItem from="1537960964760" duration="713000" />
+      <workItem from="1537961686816" duration="8586000" />
+      <workItem from="1537974681341" duration="2371000" />
+      <workItem from="1538133254812" duration="57000" />
+      <workItem from="1539699073200" duration="745000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="67112000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="59" y="25" width="1307" height="743" extended-state="6" />
+    <layout>
+      <window_info content_ui="combo" id="Project" order="0" weight="0.26566216" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32894737" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
+      <window_info active="true" anchor="bottom" x="65" y="301" width="1294" height="200" id="Terminal" order="9" visible="true" weight="0.9414634" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" weight="0.3298969" />
+      <window_info anchor="right" id="Database" />
+      <window_info anchor="right" id="SciView" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/first/select.html" />
+    <entry file="file://$PROJECT_DIR$/first/css/main.css" />
+    <entry file="file://$PROJECT_DIR$/first/three_css.html" />
+    <entry file="file://$PROJECT_DIR$/first/01-struct.html" />
+    <entry file="file://$PROJECT_DIR$/first/02_列表标签(3种).html" />
+    <entry file="file://$PROJECT_DIR$/first/03_表单.html" />
+    <entry file="file://$PROJECT_DIR$/first/04-选择器.html" />
+    <entry file="file://$PROJECT_DIR$/first/05_盒子模型(上).html" />
+    <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1701">
+          <caret line="10224" lean-forward="true" selection-start-line="10224" selection-end-line="10224" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first/07-盒子模型(下).html" />
+    <entry file="file://$PROJECT_DIR$/first/06_盒子模型(中).html" />
+    <entry file="file://$PROJECT_DIR$/first/08-css初始化.html" />
+    <entry file="file://$PROJECT_DIR$/first/01_相对路径和绝对路径.html" />
+    <entry file="file://$PROJECT_DIR$/third/01_显示隐藏盒子.html" />
+    <entry file="file://$PROJECT_DIR$/third/02-css元素溢出的处理.html" />
+    <entry file="file://$PROJECT_DIR$/third/03-浮动.html" />
+    <entry file="file://$PROJECT_DIR$/third/04-表格(上).html" />
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.html" />
+    <entry file="file://$PROJECT_DIR$/third/05-表格(中).html" />
+    <entry file="file://$USER_HOME$/Desktop/1.html" />
+    <entry file="file://$PROJECT_DIR$/third/07_Relative_positioning.html" />
+    <entry file="file://$PROJECT_DIR$/third/10_positioning_expand.html" />
+    <entry file="file://$PROJECT_DIR$/third/09_fixed_positioning.html" />
+    <entry file="file://$PROJECT_DIR$/third/08_absolute_positioning.html" />
+    <entry file="file://$PROJECT_DIR$/third/11_css权重.html" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/js/demo.js" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/01_js基本语法规范.html" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/00_javascript书写位置.html" />
+    <entry file="file://$PROJECT_DIR$/first/1.html" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/02_函数_judge.html" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/03_获取元素.html" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/05_操作标签属性.html" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/css/skin2.css" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/css/skin1.css" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/07_网页更换皮肤.html" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/06_事件驱动.html" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/css/main02.css" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/08_打印名片.html" />
+    <entry file="file://$PROJECT_DIR$/03_javascript/111.html" />
+    <entry file="file://$PROJECT_DIR$/01_html_css_primary/README.md">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="529">
+            <caret line="123" lean-forward="true" selection-start-line="123" selection-end-line="123" />
+            <folding>
+              <element signature="e#171#177#1" expanded="true" />
+              <element signature="e#182#188#1" expanded="true" />
+              <element signature="e#80#84#0" expanded="true" />
+              <element signature="e#93#97#0" expanded="true" />
+              <element signature="e#105#111#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/02_html_css_Senior/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="461">
+            <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/03_js_Primary/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="136">
+            <caret line="8" selection-start-line="8" selection-end-line="8" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07_JQuery_Senior/10-JSON.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" selection-start-line="11" selection-end-line="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/07_JQuery_Senior/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="495">
+            <caret line="30" lean-forward="true" selection-start-line="30" selection-end-line="30" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/08_ajax_and_vueStart/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="408">
+            <caret line="24" selection-start-line="24" selection-end-line="24" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
+  </component>
+</project>

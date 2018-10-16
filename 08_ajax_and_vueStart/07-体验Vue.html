@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div {
+            height: 34px;
+            font: 22px/34px 'simsun';
+            background: skyblue;
+        }
+    </style>
+    <script src="js/vue.min.js"></script>
+</head>
+<body>
+<!--2. 在标签中使用变量和方法操作数据-->
+<!--{{}}: 胡子语法：mustache语法-->
+<div id="box">{{ str1 }}</div>
+<script>
+
+    //
+    <!--vue.js 的操作　-->
+    //
+    <!--１．创建Vue对象，定义变量和方法-->
+    var aaa = new Vue({
+        //
+        <!--a. 获取标签-->
+        el: '#box',     // el 规定操作那个标签
+        data: {
+            str1: 'hello vue!',
+        }
+
+    })
+</script>
+</body>
+</html>

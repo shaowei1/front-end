@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>04-表格(上)</title>
+    <style>
+        /*表格单独设置颜色*/
+        table {
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+
+        /*tr不能设置border*/
+        /*
+        tr{
+            border: 1px solid red;
+        }
+        */
+        td {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<!--表格标签: 用于在页面上显示数据库中的信息-->
+<!--结构: table > tr(行) > td/th(单元格) &ndash;&gt;-->
+
+<!--table代表这个表格-->
+<!--table标签自定义一个border属性,可以设置整个表格的边线-->
+<!--cellspacing: 控制table里面, td外面的距离-->
+<!--cellpadding: td里面的内边距-->
+<!--<table cellspacing="0" cellpadding="0">-->
+<table>
+    <!--tr代表行-->
+    <tr>
+        <!--td和th代表单元格-->
+        <td>序号</td>
+        <td>表头1</td>
+        <td>表头2</td>
+        <td>表头3</td>
+    </tr>
+
+    <!--内容部分-->
+    <tr>
+        <td>1</td>
+        <td>内容1</td>
+        <td>内容2</td>
+        <td>内容3</td>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>内容1</td>
+        <td>内容2</td>
+        <td>内容3</td>
+    </tr>
+
+    <tr>
+        <td>1</td>
+        <td>内容1</td>
+        <td>内容2</td>
+        <td>内容3</td>
+    </tr>
+</table>
+</body>
+</html>

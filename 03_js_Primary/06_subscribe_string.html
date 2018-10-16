@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06_描述字符串</title>
+</head>
+<body>
+<script>
+    // 1.define string
+    var str0 = 'abcd'
+    var str1 = "yangxinyue"
+
+    // 不可变类型，不可以修改
+    console.log(str0.length)
+    console.log(str0[0])
+
+    console.log('aaa' + 123)    // 加法会把数值转换成字符串操作
+    console.log('111' - 11)     //　减法会把字符串转换成数值
+
+    // 字符串中提取数值（parseInt() / parseFloat())
+    console.log(parseInt('12.12abd'))
+    console.log(parseFloat('12.12asfs'))
+    console.log(parseFloat('a12.12asfs'))   // NaN (not a number)
+    console.log(typeof (NaN))   // number
+
+</script>
+</body>
+</html>

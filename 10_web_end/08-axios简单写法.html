@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script src="js/axios.min.js"></script>
+    <script>
+        window.onload = function(){
+            var vm = new Vue({
+                // 获取
+                el: '#app',
+                // 定义变量
+                data: {
+
+                },
+                // 页面加载的时候使用axios应该定义到mounted里面。
+                mounted: function(){
+                    // 方法1：
+                    axios({
+                        url: '/index_data',
+                        method: 'get/post',
+                        // data/params: {
+                        //     get --> params,
+                        //     post -> data
+                        // }
+
+                        // responseType: 'json',
+                    })
+                    .then(function(obj){
+                        alert(obj.data)
+                    })
+                    .catch(function(){
+                        alert('服务器异常!')
+                    })
+
+                    // 方法2：
+                    axios.get('/index_data?ID=123')
+                    .then(function(obj){
+                        alert(obj.data)
+                    })
+                    .catch(function(){
+                        alert('服务器异常!')
+                    })
+
+
+                    // 方法3：
+                    axios.get('/index_data', {
+                        params: {
+                            'ID': 123,
+                        }
+                    })
+                    .then(function(obj){
+                        alert(obj.data)
+                    })
+                    .catch(function(){
+                        alert('服务器异常!')
+                    })
+
+                    // 方法4：
+                    axios.post('/index_data', {
+                        ID: '123'
+                    })
+                    .then(function(obj){
+                        alert(obj.data)
+                    })
+                    .catch(function(){
+                        alert('服务器异常!')
+                    })
+
+
+
+                }
+            })
+        }
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>

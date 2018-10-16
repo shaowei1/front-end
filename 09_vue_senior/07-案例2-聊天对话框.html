@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style type="text/css">
+        .talk_con {
+            width: 600px;
+            height: 500px;
+            border: 1px solid #666;
+            margin: 50px auto 0;
+            background: #f9f9f9;
+        }
+
+        .talk_show {
+            width: 580px;
+            height: 420px;
+            border: 1px solid #666;
+            background: #fff;
+            margin: 10px auto 0;
+            overflow: auto;
+        }
+
+        .talk_input {
+            width: 580px;
+            margin: 10px auto 0;
+        }
+
+        .whotalk {
+            width: 80px;
+            height: 30px;
+            float: left;
+            outline: none;
+        }
+
+        .talk_word {
+            width: 420px;
+            height: 26px;
+            padding: 0px;
+            float: left;
+            margin-left: 10px;
+            outline: none;
+            text-indent: 10px;
+        }
+
+        .talk_sub {
+            width: 56px;
+            height: 30px;
+            float: left;
+            margin-left: 10px;
+        }
+
+        .atalk {
+            margin: 10px;
+        }
+
+        .atalk span {
+            display: inline-block;
+            background: #0181cc;
+            border-radius: 10px;
+            color: #fff;
+            padding: 5px 10px;
+        }
+
+        .btalk {
+            margin: 10px;
+            text-align: right;
+        }
+
+        .btalk span {
+            display: inline-block;
+            background: #ef8201;
+            border-radius: 10px;
+            color: #fff;
+            padding: 5px 10px;
+        }
+    </style>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            //    以后遇见问题: vue解决: 定义变量(arr), 页面上去遍历标签。函数中添加逻辑。
+            // 思路分析: 1.绑定事件。  
+            //          2.定义一个数组将来生成标签，每一个元素有两条描述信息。
+            //               两条描述信息就用对象。 {'person':'A/B', 'words': '...'}
+            //          3.页面上根据arr遍历标签。   
+            //          4.把input和select标签的数据组成一个对象，添加到数组中。
+            var vm = new Vue({
+                el: '.talk_con',
+                data: {
+                    arr: [
+                        {'Person': "A", 'Words': 'eat ?'},
+                        {'Person': "B", 'Words': 'no, are you ?'},
+                    ],
+
+                    str1: '0',
+                    str2: 'please input...'
+                },
+
+                methods: {
+                    add_data: function () {
+                        // console.log(this.str1, this.str2)
+                        var str3 = this.str1 == '0' ? 'A' : 'B'
+
+                        var obj = {'Person': str3, "Words": this.str2}
+
+                        this.arr.push(obj)
+
+                        this.str2 = ''
+
+                    }
+                }
+            })
+
+        }
+    </script>
+</head>
+<body>
+<div class="talk_con">
+    <div class="talk_show" id="words">
+        <!--<div class="atalk"><span>A speak: eat?</span></div>-->
+        <!--<div class="btalk"><span>B speak: no, you? </span></div>-->
+
+        <div v-bind:class="i.Person=='A'?'atalk':'btalk'" v-for=" i in arr">
+            <span>{{i.Person}} speak: {{ i.Words }} </span></div>
+    </div>
+
+    <div class="talk_input">
+        <select name="" id="who" class="whotalk" v-model="str1">
+            <option value="0" class="value">A speak:</option>
+            <option value="1" class="value">B speak:</option>
+        </select>
+
+        <input type="text" onfocus="if(value == 'please input...'){value=''}"
+               onblur="if(value==''){value='please input...'}" class="talk_word" id="talkwords" v-model="str2">
+        <input type="button" class="talk_sub" id="talksub" value="send" @click="add_data()">
+
+    </div>
+
+
+</div>
+</body>
+</html>

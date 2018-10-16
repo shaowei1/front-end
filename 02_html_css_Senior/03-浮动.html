@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03-浮动</title>
+    <style>
+        .box {
+            width: 1000px;
+            height: 500px;
+            background: #ccc;
+            margin: 0 auto;
+        }
+        .box1 {
+            width: 100px;
+            height: 200px;
+            background: red;
+            font: 50px/200px 'simsum';
+            text-align: center;
+            float: left;
+        }
+        .box2 {
+            width: 100px;
+            height: 200px;
+            background: yellow;
+            font: 50px/200px 'simsun';
+            text-align: center;
+            float: left;
+        }
+        .box3 {
+            width: 100px;
+            height: 200px;
+            background: blue;
+            font: 50px/200px 'ismsun';
+            text-align: center;
+            float: left;
+        }
+        .box4 {
+            width: 100px;
+            height: 200px;
+            background: green;
+            font: 50px/200px 'simsun';
+            text-align: center;
+            float: right;
+        }
+
+        /*.box div{*/
+            /*float: left;*/
+        /*}*/
+
+    </style>
+</head>
+<body>
+
+    <!--浮动: 功能就是让块级元素,同行显示-->
+    <!--注意: 一个盒子里的子盒子,要么都浮动,要么都不浮动-->
+    <!--float: letf/right-->
+    <!--为了兼容浏览器的放大,缩小,可能会产生一个像素的丢失,不会都占满,一般会留下几个像素的空隙-->
+    <div class="box">
+        <div class="box1">1</div>
+        <div class="box2">2</div>
+        <div class="box3">3</div>
+        <div class="box4">4</div>
+    </div>
+</body>
+</html>

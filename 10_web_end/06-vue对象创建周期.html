@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function(){
+            // 创建vue对象
+            var vm = new Vue({
+                // 获取
+                el: '#app',
+                // 设置变量
+                data: {
+                    str: '',
+                },
+                // 展示vue创建周期。
+                beforeCreate: function(){
+                    console.log('创建前...1')
+                },
+                created: function(){
+                    console.log('创建中...2')
+                },
+                beforeMount: function(){
+                    console.log('挂载/初始化前...3')
+                },
+                // 记住: 将来把axios(ajax)写到这里面
+                mounted: function(){
+                    console.log('挂载/初始化中---(未来最有用，将来把axios(ajax)写到这里面)...4')
+                },
+
+            })
+
+        }
+    </script>
+</head>
+<body>
+    <div id="app"></div>
+</body>
+</html>

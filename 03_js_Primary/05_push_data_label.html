@@ -1,0 +1,39 @@
+<!DOCTYPE>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>yang</title>
+    <style>
+        #box {
+            list-style: none;
+            margin: 0px;
+            padding: 0px;
+        }
+    </style>
+    <script>
+        window.onload = function () {
+            var arr = ["海阔天空", "往事如风", "你若成分", "樱花树下的约定"];
+            var ul = document.getElementById('box');
+
+            var str = '';
+
+            for (var i = 0; i < arr.length; i++) {
+                str += '<li>' + arr[i] + '</li>';
+            }
+
+            ul.innerHTML = str;
+        }
+
+    </script>
+</head>
+<body>
+<h1>Music</h1>
+<ul id="box">
+    <li>That's girl</li>
+    <li>Rolling in the deep</li>
+    <li>Apologize</li>
+    <li>night_butterfly</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_js基本语法规范</title>
+</head>
+<body>
+    <script>
+        /*1.变量的定义
+            a.变量名可以使用$
+            b.变量的命名,一般使用var声明
+                1)区分大小写
+                2)第一个字符必须是字母/下划线/美元符号
+                3)其他字符可以是字母/下划线/美元符号/数字
+        */
+        // var $num_ = 111;
+        // alert($num_)
+
+        /*2.数据类型划分
+        简单数据类型: string/number/boolean/undefined(undefined是null分出来的)
+        复杂数据类型: null/列表(数组)/字典(对象)/函数*/
+        var a   //只定义变量, 不赋值就是undefined
+        var b = undefined //undefined赋值也可以
+        console.log(typeof('a'));
+        console.log(typeof(111.111));
+        console.log(typeof (true))
+        console.log(typeof(a));
+        console.log(typeof(null));
+        console.log(b)
+        console.log(typeof (b));
+
+        //转换类型: string() / number() / boolean()
+
+        // 算术运算符: + - * / %
+        /*赋值运算符:= += -= *= /= %=
+        比较运算符:> < >= <= == != (===判断相同且数据类型也相同)
+        逻辑运算符: && || ! */
+
+
+    </script>
+</body>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>04_特殊动画</title>
+    <style>
+        div {
+            /* display: none; */
+            width: 200px;
+            height: 200px;
+            margin: 20px;
+            padding: 20px;
+            background: red;
+        }
+    </style>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(window).ready(function () {
+            // 时间: 不写默认400;     fast:400;   normal:600   slow:800;
+
+
+            // 绑定事件
+            $("button").click(function () {
+                // 1.show()/hide()/toggle(): 显示隐藏。
+                // 无参瞬间显示
+                // $("div").hide()
+                // $("div").show()
+
+                // 动画，慢慢显示
+                // $("div").show(1000)
+
+                // 回调函数
+                // $("div").show(400, function(){
+                //     alert('我是回调函数，显示完毕在执行。')
+                // })
+
+
+                // 隐藏
+                // $('div').hide(1000)  // 无参立刻变没，可指定时间，可设置回调函数。
+
+                // 切换
+                // $('div').toggle(1000)      // 无参立刻切换，可指定时间，可设置回调函数。
+
+
+                // 2.slideDown()/slideUp()/slideToggle(): 滑入/滑出
+                // $('div').slideDown()  // 无参默认400ms滑入。
+                // $('div').slideDown(1000, function(){
+                //     alert('回调')  // 可设置参数，可设置回调函数。
+                // })
+
+                // 滑出
+                // $('div').slideUp(1000) // 无参默认400ms滑出,可设置参数,可设置回调函数。
+
+                // 切换
+                // $("div").slideToggle(1000) // 无参默认400ms切换,可设置参数,可设置回调函数。
+
+
+                // 3.fadeIn()/fadeOut()/fadeToggle()/fadeTo(): 淡入/淡出
+                // $('div').fadeIn() // 无参默认400ms淡入。
+                // $('div').fadeIn(1000, function(){
+                //     alert('回调')
+                // })  // 可设置参数，可设置回调函数。
+
+                // 淡出
+                // $('div').fadeOut(1000)  // 无参默认400ms淡出,可设置参数,可设置回调函数。
+
+                // 切换
+                // $("div").fadeToggle(1000)  // 无参默认400ms切换,可设置参数,可设置回调函数。
+
+                // 淡入程度...（必须传时间）
+                // $("div").fadeTo(1000, 0.4)  // 回调函数也能用
+
+
+            })
+        })
+    </script>
+</head>
+<body>
+<button>特殊动画</button>
+<div></div>
+</body>
+</html>

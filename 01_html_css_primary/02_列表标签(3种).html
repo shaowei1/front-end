@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>3种列表标签</title>
+    <style>
+        ul {
+            padding: 0px;
+            padding: 0px;
+            /*去掉ul里面li前面的小圆点*/
+            list-style: none;
+        }
+
+        ol {
+            /*去掉ol里面li前面的编号*/
+            list-style: none;
+        }
+
+        /*dl没有列表风格,如果想要去掉dd前面的空白,需要使用margin/padding;*/
+        dd {
+            margin: 0px;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--
+    列表标签:就是用于显示多个相同的数据类型
+    html中的列表标签分为3类:
+        1.unordered list. ul 标签里面嵌套li标签(ul,li 都是块级元素 用的最多)
+        2.ordered list.    ol 标签里嵌套li标签(ol,li都是块级元素, 用的极少)
+        3.custom list.      dl标签里面嵌套dt和dd(dl/dt/dd都是块级元素, 用的比较少)
+-->
+
+<!--1.unordered list. ul 标签里面嵌套li标签-->
+一线城市:
+<ul>            <!--一般用于做导航栏-->
+    <li>北京</li>
+    <li>上海</li>
+    <li>广州</li>
+    <li>深圳</li>
+</ul>
+
+<!--2.ordered list.    ol 标签里嵌套li标签-->
+3年级一班成绩排名:
+<ol>
+    <li>第一名:小明 99</li>
+    <li>第一名:小花 92</li>
+    <li>第一名:小里 91</li>
+    <li>第一名:小红 89</li>
+</ol>
+
+<!--3.custom list.      dl标签里面嵌套dt和dd-->
+dl的使用:
+<dl>
+    <dt>描述苹果</dt>
+    <dd>品种: 红富士</dd>
+    <dd>颜色: 红</dd>
+    <dd>味道: 甜</dd>
+    <dd>价格: 不定</dd>
+</dl>
+</body>
+</html>

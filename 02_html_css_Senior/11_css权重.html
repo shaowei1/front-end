@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>11_css权重</title>
+    <style>
+        /*id权限大概在100*/
+        #box {
+            background-color: skyblue;
+        }
+
+        /*类权限大概10*/
+        .box {
+            background: green;
+        }
+
+        /*权限2*/
+        body div {
+            background: blue;
+        }
+
+        /*标签权限1*/
+        div {
+            width: 200px;
+            height: 200px;
+            background: red!important;
+        }
+    </style>
+</head>
+<body>
+<!--权限: 给盒子上样式,谁的高,谁的高,谁的起作用-->
+<!--!important > style > id > class > tagName-->
+
+<!--行内style属性,权限大概1000-->
+<div class="box" id="box" style="background: purple;"></div>
+</body>
+</html>

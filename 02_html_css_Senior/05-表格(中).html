@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05-表格中</title>
+    <style>
+        table{
+            border: 1px solid red;
+            border-collapse: collapse;
+        }
+
+        /*tr不能设置border*/
+        td, th {
+            width: 100px;
+            height: 50px;
+            text-align: center;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+<table>
+    <!--table标签内部由两部分构成: thead/tbody-->
+    <thead>
+    <tr>
+        <!--快捷方式td*4Tab-->
+        <td>serial number</td>
+        <td>header1</td>
+        <td>header2</td>
+        <td>header3</td>
+    </tr>
+    </thead>
+
+    <tbody>
+    <tr>
+        <td>1</td>
+        <td>content1</td>
+        <td>content2</td>
+        <td>content3</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>content1</td>
+        <td>content2</td>
+        <td>content3</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>content1</td>
+        <td>content2</td>
+        <td>content3</td>
+    </tr>
+    <tr>
+        <td>1</td>
+        <td>content1</td>
+        <td>content2</td>
+        <td>content3</td>
+    </tr>
+    </tbody>
+</table>
+<!-- 总结:
+     1.未来我们会用ul, table标签展示数据
+     2.table比div和ul之类的慢,因为先渲染表格,再渲染数据
+     3.会用form标签先收集页面数据,发送到后台-->
+</body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+
+            $('input').focus().keyup(function () {
+                // alert($(this).val())
+
+                // 键盘弹起时，就是ajax发送的时候（刷新页面的一部分）
+                $.ajax({
+                    // https://sug.so.360.cn/suggest?
+                    // callback=suggest_so
+                    // encodein=utf-8
+                    // encodeout=utf-8
+                    // format=json
+                    // fields=word
+                    // word=%E7%BE%8E%E5%A5%B3
+
+                    url: 'https://sug.so.360.cn/suggest',
+                    type: 'get',
+                    dataType: 'jsonp',
+                    data: {'word': $(this).val()},
+                    success(dat) {
+                        // console.log(dat)
+                        // console.log(dat.s)
+
+                        // 渲染到页面上
+                        var str = ''
+                        for (var i = 0; i < dat.s.length; i++) {
+                            str += '<li>' + dat.s[i] + '</li>'
+                        }
+                        $('ul').html(str)
+
+                    },
+                    error: function () {
+                        alert('web error!')
+                    }
+                })
+            })
+
+        })
+    </script>
+</head>
+<body>
+
+<!-- https://sug.so.360.cn/suggest?callback=suggest_so&encodein=utf-8&encodeout=utf-8&format=json&fields=word&word=ao -->
+
+<!-- url: https://sug.so.360.cn/suggest -->
+<!-- data: word=ao -->
+
+<input type="text">
+<ul>
+
+</ul>
+
+
+</body>
+</html>

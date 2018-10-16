@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06-盒子模型中</title>
+    <style>
+        div {
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+
+            /*1.border: 粗细 类型 颜色*/
+            /*solid:  直线  dashed: 虚线  dotted: 点线*/
+            /*border: 10px solid red;*/
+            /*四个方向单独控制*/
+            border-top: 10px solid red;
+            border-bottom: 10px solid red;
+            border-left: 10px solid red;
+            border-right: 10px solid red;
+
+            /*2.padding: 用法;*/
+            /*2.1四个方向*/
+            /*padding-top: 10px;*/
+            /*padding-bottom: 10px;*/
+            /*padding-left: 10px;*/
+            /*padding-right: 10px;*/
+
+            /*2.2参数可以传 1/2/3/4/个*/
+            /*padding: 10px; !*4个方向*!*/
+            /*padding: 10px 100px; !*上下    左右*!*/
+            /*padding: 10px 50px 100px; !* 上    左右  下*!*/
+            padding: 10px 20px 30px 40px; /**/
+
+            /*3.margin: 和padding一样*/
+            margin: 100px;
+            /*margin-left: 100px;*/
+        }
+    </style>
+</head>
+<body>
+<div>
+    花间一壶酒,独酌无相亲<br>
+    举杯邀明月,对饮成三人
+</div>
+</body>
+</html>

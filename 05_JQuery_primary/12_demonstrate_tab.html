@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>12_案例＿选项卡</title>
+    <style>
+        .tab_con {
+            width: 500px;
+            height: 350px;
+            margin: 50px auto 0;
+        }
+
+        .tab_btns {
+            height: 50px;
+        }
+
+        .tab_btns input {
+            width: 100px;
+            height: 50px;
+            background: #ddd;
+            border: 0px;
+            font: 18px/50px 'simsun';
+            float: left;
+            cursor: pointer; /*鼠标在上面悬浮时的显示方式*/
+            outline: none;
+        }
+
+        .tab_btns .active {
+            background: gold;
+        }
+
+        .tab_cons {
+            height: 300px;
+        }
+
+        .tab_cons div {
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            display: none;
+            font-size: 30px;
+        }
+
+        .tab_cons .current {
+            display: block;
+            background: gold;
+        }
+    </style>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            // 点击那个input，添加active类，其他的input删除active
+
+            /*            $(".tab_btns input").click(function () {
+                            $(this).addClass('active')
+                            $(this).siblings('input').removeClass('active')
+
+                            var index = $(this).index()
+                            console.log(index)
+                            $(".tab_cons div").eq(index).addClass("current")
+
+                            $(".tab_cons div").eq(index).siblings('div').removeClass("current")
+                        })*/
+
+            $(".tab_btns input").click(function () {
+                $(this).addClass('active').siblings('input').removeClass('active')
+                $(".tab_cons div").eq($(this).index()).addClass("current").siblings('div').removeClass('current')
+            })
+        })
+    </script>
+</head>
+<body>
+<div class="tab_con">
+    <div class="tab_btns">
+        <input type="button" value="按钮一" class="active">
+        <input type="button" value="按钮二">
+        <input type="button" value="按钮三">
+        <input type="button" value="按钮四">
+        <input type="button" value="按钮五">
+    </div>
+    <div class="tab_cons">
+        <div class="current">按钮一对应的内容</div>
+        <div>按钮二对应的内容</div>
+        <div>按钮三对应的内容</div>
+        <div>按钮四对应的内容</div>
+        <div>按钮五对应的内容</div>
+
+    </div>
+</div>
+</body>
+</html>

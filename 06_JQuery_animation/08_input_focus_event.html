@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>08_事件＿上</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        jQuery(window).ready(function () {
+            // 1.获取焦点事件。   focus()
+            // $("input").focus(function(){
+            //     console.log('获取焦点了...')
+            // })
+
+            // 2.失去焦点事件。   blur();    以后用的最多。
+            // $('input').blur(function(){
+            //     console.log('失去焦点了...')
+            // })
+
+            $("input").blur(function () {
+                if ($(this).val().length < 6) {
+                    $("div").html("content can't lower 6")
+                    $("div").css("color", "red")    //$("p").css({"background-color":"yellow","font-size":"200%"});
+                } else {
+                    // alert("yangixnyue")
+                    $("div").html("congratulations you are right.")
+                    $("div").css({"color": "green"})
+                }
+            })
+
+        })
+    </script>
+</head>
+<body>
+
+<input type="text">
+<div></div>
+
+</body>
+</html>

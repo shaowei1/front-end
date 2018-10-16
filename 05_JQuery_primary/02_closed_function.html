@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_封闭函数</title>
+</head>
+<body>
+<script>
+    // 封闭函数　－－　匿名函数自调用　－－沙箱
+
+    // fn()
+    // (function () {
+    //     alert('自调用第一种')
+    // })()
+    //
+    // !function () {
+    //     alert('自调用第二种')
+    // }()
+    //
+    // ~function () {
+    //     alert('自调用第三种')
+    // }()
+    //
+    // function fn() {
+    //     alert(111)
+    // }
+    //
+    // fn(); //需要加;不然会默认拼接下面的自调用
+    //
+    // (function () {
+    //     alert('匿名函数自调用')
+    // })()
+
+
+    // 沙箱：　块级作用域
+    var num = 222;
+    (function () {
+        var num = 111
+        alert(num)
+
+        // 和全局函数不影响
+        function fn() {
+            alert(222)
+        }
+
+        fn()
+    })()
+
+
+</script>
+
+</body>
+</html>

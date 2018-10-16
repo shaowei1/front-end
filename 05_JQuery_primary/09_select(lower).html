@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>09_选择器（下）</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        // 2.入口函数
+/*        $(function () {
+
+            // $('#box').prev(); //选择id是box的元素前面紧挨的同辈元素
+            // $('#box').prevAll(); //选择id是box的元素之前所有的同辈元素
+            // $('#box').next(); //选择id是box的元素后面紧挨的同辈元素
+            // $('#box').nextAll(); //选择id是box的元素后面所有的同辈元素
+            // $('#box').siblings(); //选择id是box的元素的同级元素
+            // $('#box').parent(); //选择id是box的元素的父元素
+            // $('#box').children(); //选择id是box的元素的所有子元素
+            // $('#box').find('.myClass'); //选择id是box的元素内的class等于myClass的元素
+            // $("#box").index(); // 元素在父盒子中，所有子元素排列对应的索引值
+
+            var $li3 = $("#box")
+            var $ul = $li3.parent()
+            // 前一个、前所有个
+            console.log($li3.prev())
+            console.log($li3.prevAll())
+            // 后一个、后所有个
+            console.log($li3.next())
+            console.log($li3.nextAll())
+            // siblings(): 兄弟们
+            console.log($li3.siblings('li'))
+            // parent(): 父标签
+            console.log($li3.parent())
+            // children(): 子标签。    find(): 子子孙孙。
+            console.log($ul.children('li'))
+            console.log($ul.find('li'))
+
+            // index(): 所有子元素中的索引值。
+            console.log($li3.index())
+
+        })*/
+
+    </script>
+</head>
+<body>
+<ul>
+    <li>我是li标签1</li>
+    <li>我是li标签2</li>
+    <p>哈哈哈</p>
+    <li id="box">我是li标签3</li>
+    <li>我是li标签4</li>
+    <li>我是li标签5</li>
+    <p>我是p标签</p>
+    <ol>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ol>
+</ul>
+
+</body>
+</html>

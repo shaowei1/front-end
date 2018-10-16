@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        #app div {
+            background: skyblue;
+        }
+    </style>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            var vm = new Vue({
+                el: "#app",
+
+                data: {
+                    ipt1: "我是input的初始化值",
+                    sex: 'female',
+                    city_index: 1,
+                    sty1: {
+
+                        'background-color': 'skyblue',
+                    },
+                    arr: []
+                },
+
+            })
+        }
+    </script>
+</head>
+<body>
+<div id="app">
+    <input type="text" name="" class="" id="ipt1" value="" v-model="ipt1">
+    <div :style="sty1">input里面的值是: {{ ipt1 }}</div>
+    <br>
+
+    性别: <input type="radio" name="gender" value="female" v-model="sex">女
+    <input type="radio" name="gender" value="male" v-model="sex">男
+    <div :style="sty1">单选按钮，被选中项目是: {{ sex }}</div>
+    <br>
+
+    爱好:
+    <input type="checkbox" name="" value="琴" v-model="arr">琴 <!--[0]-->
+    <input type="checkbox" name="" value="棋" v-model="arr">棋 <!--[1]-->
+    <input type="checkbox" name="" value="书" v-model="arr">书 <!--[2]-->
+    <input type="checkbox" name="" value="画" v-model="arr">画 <!--[3]-->
+    <div :style="sty1">多选按钮被选中的项有: {{arr}}</div>
+    <br>
+
+    <select name="" id="" v-model="city_index">
+        <option value="0" >北京</option>
+        <option value="1" >上海</option>
+        <option value="2" >广州</option>
+        <option value="3" >深圳</option>
+    </select>
+    <div :style="sty1">被选中的城市索引值: {{ city_index }}</div>
+
+
+</div>
+
+</body>
+</html>

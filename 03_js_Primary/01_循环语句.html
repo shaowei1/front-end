@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_循环语句</title>
+    <script>
+        window.onload = function () {
+            var i = 1;
+
+            while (i < 3) {
+                console.log(i);
+                i++;
+            }
+            /*可以通过source断点调试，
+            * add to select to watch 在watch中去观察变量执行过程中的变化*/
+            //变量ｊ->undefined -> j=1-> j< 3==True->console.log(i*10)-> j++-> j< 3==True->...
+            // 断点调试过程中可以通过step into next function call 进入函数内部，观看函数调用具体过程
+
+            for (var j = 1; j < 3; j++) {
+                console.log(i * 10);
+            }
+
+            f()
+
+            function f() {
+                console.log(1)
+                console.log(2)
+                console.log(3)
+            }
+
+            //死循环，如果事先没有打开控制台，执行的时候会一直渲染，操作不了
+            // for (; ;) {
+            //     console.log('yangxinyue');
+            // }
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_js_扩展</title>
+</head>
+<body>
+<ul>
+    <li>我是li标签１</li>
+    <li class="aaa">我是li标签２</li>
+    <li id="box">我是li标签３</li>
+    <li class="aaa">我是li标签４</li>
+    <li>我是li标签５</li>
+</ul>
+
+<script>
+    // 1. 通过标签名／类名／ｉｄ获取标签
+    // ２．通过标签找其他标签（兄弟标签／子标签／父标签）（访问关系／节点层级）
+    // ３．标签的操作（创建／删除／添加／复制／替换）
+    // ４．DOM-- 明白理念
+
+    // // 拓展1: 通过标签名/类名/id获取标签。
+    var li3 = document.getElementById('box')  // 通过id获取标签。
+    console.log(li3)
+     // 通过标签名获取标签: 一个或者没有返回的也是一个伪数组
+     var liArr = document.getElementsByTagName('li') //[li, li.aaa, li#box, li.aaa, li, box: li#box]
+     console.log(liArr)
+     var ulArr = document.getElementsByTagName('ul')
+     console.log(ulArr)
+     // 通过类名获取标签: 一个或者没有返回的也是一个伪数组
+     var aaaArr = document.getElementsByClassName('aaa')
+     console.log(aaaArr)
+     var aaaArr = document.getElementsByClassName('bbb')
+     console.log(aaaArr)
+
+
+     // 拓展2: 通过标签找其他标签.(兄弟标签/子标签/父标签)（访问关系/节点层级）
+     console.log(li3.nextElementSibling)
+     console.log(li3.previousElementSibling)
+
+    var ul = li3.parentNode
+     console.log(ul)
+
+     console.log(ul.firstElementChild)
+     console.log(ul.lastElementChild)
+     console.log(ul.children)
+     console.log(ul.childNodes)
+
+
+     // 拓展3: 标签的操作(创建/添加/删除/复制/替换)
+     // 创建
+     var newLi = document.createElement('li')
+     newLi.innerHTML = '我是外部创建的li标签'
+     // 添加
+     ul.appendChild(newLi)
+     // 删除
+     ul.removeChild(li3)
+
+
+     // 拓展4: DOM -- 明白理念 (很重要)。
+     //  DOM: Document Object Model;   所有标签加载到内存中，以树状结构存储。
+     //    所有的标签都被称为:  节点   /  js对象  /  DOM对象  /  元素标签
+
+</script>
+</body>
+</html>

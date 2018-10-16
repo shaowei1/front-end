@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>07-定位_相对定位</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background: skyblue;
+        }
+
+        .box2 {
+            width: 300px;
+            height: 300px;
+            background: yellow;
+            /*relative_positioning*/
+            position: relative;
+            /*可以使用top/left/bottom/right控制位置*/
+            /*正值: 向下,右    负值: 向左,上*/
+            top: 0;
+            left: 0;
+        }
+        .box3{
+            width: 400px;
+            height: 200px;
+            background: pink;
+        }
+    </style>
+</head>
+<body>
+<!--定位: 让盒子相放哪里,就放哪里-->
+<!--注意: 如果出现盒子压盒子使用定位. 如果盒子不压住盒子使用浮动-->
+<!--position: relative/absolute/fixed/static-->
+<!--
+    relative: 相对定位,以自身为基准,可以上下左右自由设置(占位置)
+        脱标:脱离标准流,脱离文档流
+    absolute: 绝对定位, 以父系盒子中带有定位的盒子为基准自由移动,父系没有定位,以body为基准(不占位置)
+    fixed: 固定位置,以浏览器(body)为基准.(不占位置)
+
+    static:盒子默认就是static(标准流/文档流)
+    -->
+    <!--shortcut: .box*3 Tab-->
+<div class="box1"></div>
+<div class="box2"></div>
+<div class="box3"></div>
+
+</body>
+</html>

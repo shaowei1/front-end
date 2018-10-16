@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>06_属性操作</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(window).load(function () {
+            // js中的属性: 1.普通属性。  2.特殊属性。
+
+            // 1.普通属性: id/title/name/href/src...  class
+            // 1.1 attr(): 普通属性用这个。    removeAttr()  删除属性。
+
+            // console.log($("#box").attr('name'))
+            // console.log($("#box").attr('class'))
+
+            // attr　用于表单操作有问题
+            // console.log($("#box").attr("checked"))
+            //
+            // $("#box").attr('name', '我是赋值内容')
+            // $("#box").attr('class', 'ccc ddd eee')
+
+            // $("#box").removeAttr('class')
+
+
+            // // 1.2 prop(): 用于操作表单属性。   checked/selected/disabled
+            // console.log($("#box").prop('checked'))  // 没有被选中，返回false。
+            // $("#box").prop('checked', true)
+            // $("#box").prop('checked', false)  // 取消选中
+
+
+            // 2.特殊属性:
+            //    innerHTML  -->  html()
+            //    className  -->  addClass()/removeClass()/toggleClass()
+            //    style  -->  css()
+            //    value  -->  val()
+
+            // // 获取
+            // console.log( $('input').val() )
+            // // 赋值
+            // $('input').val('input设置的内容...')
+
+        })
+    </script>
+</head>
+<body>
+
+<input type="text" value="我是input默认值">
+<div>杨</div>
+<input type="checkbox" id="box" class="aaa" name='bbb'>
+
+</body>
+</html>

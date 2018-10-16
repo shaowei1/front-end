@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>05_操作标签属性</title>
+    <script>
+        window.onload = function () {
+            var box1 = document.getElementById("box1");
+            console.log(box1);
+
+            // 属性操作1: 简单属性: src/id/name/title/href...
+            box1.title = "yangxinyue";
+            box1.name = "I'm div";
+
+            // 属性操作2:其他属性: innerHTML(双闭合标签内部的内容)
+            console.log(box1.innerHTML);
+            box1.innerText = "after modify content"
+
+            // 属性操作3: className(对应标签的class属性)(为什么不使用class,而要使用偏长的className,是为了表达对class的尊重,就好像别人不会拿javascript作为一个属性
+            console.log(box1.className);
+            box1.className = "after modify className";
+
+            // 如果是-链接的属性,要用小驼峰(最终浏览器会自动专程font-size)
+            box1.style.fontSize = '50px'
+
+        }
+    </script>
+</head>
+<body>
+    <a href="http://www.baidu.com" id="box1" class="aaa" style="width: 400px;">我是a链接</a>
+</body>
+</html>

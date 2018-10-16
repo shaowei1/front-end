@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>todolist</title>
+    <style type="text/css">
+        .list_con {
+            width: 600px;
+            margin: 50px auto 0;
+        }
+
+        .inputtxt {
+            width: 550px;
+            height: 30px;
+            border: 1px solid #ccc;
+            padding: 0px;
+            text-indent: 10px;
+        }
+
+        .inputbtn {
+            width: 40px;
+            height: 32px;
+            padding: 0px;
+            border: 1px solid #ccc;
+        }
+
+        .list {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            margin-top: 20px;
+        }
+
+        .list li {
+            height: 40px;
+            line-height: 40px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .list li span {
+            float: left;
+        }
+
+        .list li a {
+            float: right;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+    </style>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            // 需求１: 添加
+            $("#btn1").click(function () {
+
+                if ($("#txt1").val() == '') {
+                    alert("content can't be empty")
+                    return
+                }
+
+                var $newLi = $('        <li>\n' +
+                    '            <span>' + $("#txt1").val() + '</span>\n' +
+                    '            <a href="javascript:;" class="up"> ↑ </a>\n' +
+                    '            <a href="javascript:;" class="down"> ↓ </a>\n' +
+                    '            <a href="javascript:;" class="del">删除</a>\n' +
+                    '        </li>')
+                $("#list").prepend($newLi)
+                // 添加玩， clear
+                $("#txt1").val('')
+                // 自动获取插入光标
+                $("#txt1").focus()
+            })
+            // 需求2: 删除，向上移动，　向下移动
+            // a. 单独获取，单独设置
+            // b. 为所有元素绑定事件，然后判断是哪个
+            // 新创建处理啊的元素，也要有事件，　事件绑定需要使用事件委托
+
+            //a
+            /*            $("#list").on('click', '.del', function () {
+                            alert(1)
+                        })
+
+                        $("#list").on('click', '.down', function () {
+                            alert(2)
+                        })
+
+                        $("#list").on('click', '.up', function () {
+                            alert(3)
+                        })*/
+
+            //b
+            $("#list").delegate('a', 'click', function () {
+                // 获取属性值：attr() 普通属性/prop()　表单属性
+                // console.log($(this).attr('class'))
+
+                // 根据类名，判断逻辑
+                if ($(this).attr('class') == 'del') {
+                    $(this).parent().remove()
+                }else if($(this).attr('class') == 'down'){
+                    // 如果到了低端，不要移动，
+                    if($(this).parent().next().length == 0){
+                        alert("already is last one")
+                        return
+                    }
+                    var $currentLi = $(this).parent()
+                    $currentLi.next().after($currentLi)
+
+                }else if($(this).attr('class') == 'up'){
+                    // 如果到了低端，不要移动，
+                    // if ($(this).parent().prev().length==0)
+                    if($(this).parent().index() == 0){
+                        alert("already is first one")
+                        return
+                    }
+                    var $currentLi = $(this).parent()
+                    $currentLi.prev().before($currentLi)
+
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+
+<div class="list_con">
+    <h2>To do list</h2>
+    <div>&lt;杨&emsp;欣&nbsp;悦 &gt;</div>
+
+    <!-- 输入框 -->
+    <input type="text" name="" id="txt1" class="inputtxt">
+    <!-- 添加按钮 -->
+    <input type="button" name="" value="增加" id="btn1" class="inputbtn">
+
+    <!-- 将来想这个ul中添加li -->
+    <ul id="list" class="list">
+        <!-- 内容区 -->
+        <li>
+            <span>学习html</span>
+            <a href="javascript:;" class="up"> ↑ </a>
+            <a href="javascript:;" class="down"> ↓ </a>
+            <a href="javascript:;" class="del">删除</a>
+        </li>
+
+        <li><span>学习css</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down"> ↓ </a><a
+                href="javascript:;" class="del">删除</a></li>
+        <li><span>学习javascript</span><a href="javascript:;" class="up"> ↑ </a><a href="javascript:;" class="down">
+            ↓ </a><a href="javascript:;" class="del">删除</a></li>
+
+    </ul>
+
+</div>
+</body>
+</html>

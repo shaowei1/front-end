@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>09_事件</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        jQuery(window).ready(function () {
+            // mouseenter() 鼠标进入（进入子元素不触发）
+            // mouseleave() 鼠标离开（离开子元素不触发）
+            // hover() 同时为mouseenter和mouseleave事件指定处理函数
+            // ready() DOM加载完成
+            // submit() 用户递交表单
+
+
+            // // mouseenter() 鼠标进入（进入子元素不触发）
+            // $("div").mouseenter(function(){
+            //     console.log('111')
+            // })
+            // // mouseleave() 鼠标离开（离开子元素不触发）
+            // $("div").mouseleave(function(){
+            //     console.log('222')
+            // })
+
+            // 进入和移开都会触动
+            // $("div").hover(function(){
+            //     console.log('333')
+            // })
+
+
+            // $(document/window).ready(function(){})
+
+
+            // submit() 用户递交表单
+            //     表单提交: 是form表单的事件。  submit按钮，点击以后会触动form表单的submit() 事件
+
+            // 对提交的信息进行校验，要把逻辑写到submit()中。
+            $("form").submit(function (event) {
+
+                // 判断，满足条件就提交。不满足就不提交。
+                // if () {
+                //     alert('ok')
+                // }
+                // else {
+                //
+                // }
+                // 不满足，不提交。
+                if ($("input").eq(0).val() == '错误') {
+                    // 取消提交1
+                    // return false;
+
+                    // 取消提交2: 取消默认行为
+                    // console.log(event)
+                    alert("yang")
+                    event.preventDefault()
+                }
+
+            })
+
+
+        })
+    </script>
+</head>
+<body>
+
+<div>我是div</div>
+<br>
+<br>
+<form action="http://localhost:8080/index_data" method="GET">
+
+    用户名&emsp;: <input type="text" name="" id=""><br>
+    密&emsp;码&emsp;: <input type="password"><br>
+    确认密码: <input type="password"><br>
+    邮&emsp;箱&emsp;: <input type="text"><br>
+    <input type="submit" id="inp5">
+
+</form>
+
+</body>
+</html>

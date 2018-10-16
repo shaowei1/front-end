@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>08_print_namecard</title>
+    <link rel="stylesheet" type="text/css" href="css/main02.css">
+    <script>
+        window.onload = function () {
+            // 需求: 电击设置按钮,获取input里面的value的值,然后修改card_warp标签的内容
+
+            // 1.获取相关元素
+            // 2.绑定事件
+            // 3.书写逻辑(获取input的value值,然后符合给card_wrap标签中)
+
+            var input01 = document.getElementById('input1');
+            var input02 = document.getElementById('input2');
+            var input03 = document.getElementById('input3');
+            var input04 = document.getElementById('input4');
+            var input05 = document.getElementById('input5');
+            var input06 = document.getElementById('input6');
+            var select = document.getElementById('select')
+            var setcard = document.getElementById('setcard');
+            var card_wrap = document.getElementById('card_wrap');
+
+            setcard.onclick = function () {
+                // 如果内容为空,就不要执行
+                if (input01.value == '' || input02.value == '' || input03.value == '' || input04.value == '' || input05.value == '' || input05.value == '') {
+                    alert("content can't be empty");
+                    return
+                }
+
+
+                str = '<div class="p01">' + input01.value + '<em>' + input02.value + '</em></div>\n' +
+                    '            <div class="p02">\n' +
+                    '                <p class="company">' + input03.value + '</p>\n' +
+                    '                <p>' + input04.value + '</p>\n' +
+                    '                <p>email: ' + input05.value + '</p>\n' +
+                    '                <p>地址: ' + input06.value + '</p>\n' +
+                    '            </div>'
+
+                // 整合好内容,赋值给指定标签
+                // className    innerHTML   card_wrap.className
+                console.log(card_wrap.innerHTML)
+                card_wrap.innerHTML = str
+                if (select.value == '0') {
+                    card_wrap.className = 'idcard01'
+                } else if (select.value == '1') {
+                    card_wrap.className = 'idcard02'
+                } else if (select.value == '2') {
+                    card_wrap.className = 'idcard03'
+                }
+            };
+        }
+    </script>
+</head>
+<body>
+<div class="set_con">
+    <div class="left_set">
+        <label for="input1">姓名</label>
+        <input type="text" id="input1">
+        <label for="input2">职位</label>
+        <input type="text" id="input2">
+        <label for="input3">公司名称</label>
+        <input type="text" id="input3">
+        <label for="input5">手机</label>
+        <input type="text" id="input4">
+        <label for="input5">email</label>
+        <input type="text" id="input5">
+        <label for="input6">地址</label>
+        <input type="text" id="input6">
+        <label>风格</label>
+
+        <!--select标签的value值,就是别选中的option的value值-->
+        <select id="select">
+            <option value="0">风格一</option>
+            <option value="1">风格二</option>
+            <option value="2">风格三</option>
+        </select>
+        <input type="button" value="设 置" class="setbtn" id="setcard">
+    </div>
+    <div class="right_show">
+        <div class="idcard01" id="card_wrap">
+            <!--子标签样式不用改,内容要改-->
+            <div class="p01">张大山<em>产品经理</em></div>
+            <div class="p02">
+                <p class="company">银河科技信息技术有限公司</p>
+                <p>手机</p>
+                <p>email: dashan@126.com</p>
+                <p>地址: 中关村银河大厦B座2603</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

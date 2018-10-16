@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>07_JQuery对象和js对象区别</title>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            // js
+            //打印目录：directory
+            // 整个document 是一个目录
+
+            console.dir(document.getElementById('box'))
+            //
+            // console.log($("#box"))
+            // * 获取所有
+            console.log($("*")) // [html, head, meta, title, script, script, body, div#box, prevObject: jQuery.fn.init(1), context: document, selector: "*"]
+            // 总结: JQuery对象就是一层功能皮肤，包裹着原生JS对象。JQuery的所有方法，都在皮肤上。
+            //     学习JQuery就是学习这层功能皮肤。
+        })
+    </script>
+</head>
+
+<body>
+<div id="box"></div>
+</body>
+</html>

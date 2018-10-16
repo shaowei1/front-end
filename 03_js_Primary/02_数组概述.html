@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>02_数组概述</title>
+    <script>
+        window.onload = function () {
+            // 1.define array
+            var arr1 = [1, 2, 3];
+            console.log(arr1);
+            var arr2 = new Array('a', 'b', 'c');
+            console.log(arr2);
+
+            // 2.operation of array
+            console.log(arr2.length);
+            console.log(arr2[0]);
+            arr2[0] = '123';
+            console.log(arr2);
+
+            // ergodic array
+            for (var i = 0; i < arr2.length; i++){
+                console.log(i, arr2[i])
+            }
+
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

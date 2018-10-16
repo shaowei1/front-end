@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="https://www.baidu.com/favicon.ico">
+    <title>03_数组的api</title>
+    <script>
+        window.onload = function () {
+
+            var arr = [1, 3, 5, 12, 2, 3, 4];
+
+            // // add element to array
+            // var res1 = arr.push('abc');
+            // console.log(arr);
+            // console.log(res1);  //8
+            //
+            // // delete element to array
+            // var res2 = arr.push('1');
+            // console.log(arr);
+            // console.log(res2);  //9
+            //
+            // // modify  (index) (delete and add)
+            // arr.splice(3, 2, 'a', 'b'); //arr.splice(start, number, add1, add2,...)
+            // console.log(arr);
+            //
+            // // search from array
+            // console.log(arr.indexOf('abc'));//7
+            // console.log(arr.indexOf('xizi'));//-1
+            // console.log(arr)
+
+            // reverse()
+            // arr.reverse();
+            // console.log(arr);   //[4, 3, 2, 12, 5, 3, 1]
+
+
+            //sort
+            //必须写一个一个参数ｓｏｒｔ方法，且这个参数是一个函数
+            arr.sort(function (a, b) {
+                // ascending
+                return a - b
+                // descending
+                // return b - a
+
+
+            })
+            console.log(arr)
+
+            // splicing array
+            var str = arr.join()
+            var str = arr.join(' ')
+            var str = arr.join('-')
+            var str = arr.join('')
+            console.log(str)
+
+            // two_dimensional array
+            var arr = [['y', 'x', 'y'], [1, 2, 3]]
+
+            // js 是基于对象的，　复杂数据类型是object type is object
+            var ojb = {'id': '001', 'name': 'yang', 'age': 22}
+
+            // array contained dictionary
+            var arr = [
+                {'id': '001', 'name': 'yang', 'age': 22},
+                {'id': '002', 'name': 'yg', 'age': 21},
+                {'id': '003', 'name': 'yng', 'age': 20}
+
+            ]
+            console.log(arr)
+        };
+    </script>
+</head>
+<body>
+
+</body>
+</html>

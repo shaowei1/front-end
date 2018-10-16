@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表单</title>
+</head>
+<body>
+<!--
+
+    表单:用form标签收集页面想要提交的信息,发送到后台保存在数据库中
+    表单标签/表单域标签: input/textarea/select...
+-->
+<!--
+     action属性 定义表单数据提交地址
+     method属性 定义表单提交数据的方式,一般有"GET"和"POST"方式
+ -->
+<form action="127.0.0.1" method="GET">
+    <!--第一部分: input标签-->
+    <!--type=text: 普通输入框-->
+    <!--type=password:  暗文密码-->
+    <!--id这个属性: 这个页面中id的值应该是唯一的-->
+    <label for="inp1">username: </label><input id="inp1" type="text"><br><br>
+    <label for="inp2">password: </label><input id="inp2" type="password"><br><br>
+
+    <!--第二部分: 其他input-->
+    <!--1.想要单标签:radio-->
+    <!--想要单选按钮,只能选择一个选项,需要借助name属性,name属性值一样的单选按钮,只能选一个-->
+    <!--HTML5做出提升,如果属性和值相同,可以只写属性不写值-->
+    性别: <input type="radio" checked>男 <input name="gender" type="radio">女
+    <br><br>
+
+    <!--2.多选按钮: checkbox-->
+    爱好: <input type="checkbox">篮球
+    <input type="checkbox">足球
+    <input type="checkbox">羽毛球
+    <input type="checkbox" checked>乒乓球
+    <input type="checkbox">玻璃球
+    <br><br>
+
+    <!--3.文件上传: file-->
+    上传: <input type="file">
+    <br><br>
+
+    <!--4.提交: submit-->
+    <input type="submit">
+
+    <!--5.重置: reset-->
+    <input type="button" value="普通按钮1">
+    <br><br>
+
+    <!--第三部分: textarea/select/option-->
+    <!--文本框-->
+    <textarea></textarea>
+    <br><br>
+
+    <!--下拉菜单/下拉列表-->
+    <!--size: 显示多个-->
+    <!--multiple: 选择多个-->
+    <!--<select size="10" multiple>-->
+    <select>
+        <option>北京</option>
+        <option selected>上海</option>
+        <option>广州</option>
+        <option>深圳</option>
+    </select>
+
+</form>
+
+<!--7.普通按钮2 button标签-->
+<!--disabld: 让标签禁用,变成灰色-->
+<button disabled>普通按钮2</button>
+
+</body>
+</html>

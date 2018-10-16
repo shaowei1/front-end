@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>01_局部变量和全局变量</title>
+</head>
+<body>
+
+<script>
+    var str = 'ab\'cd'  //＇/＇转义
+
+    // 没有var的都是全局变量
+    //　隐式全局变量
+    // var a=b=c;
+    // var a;b;c;
+
+    // 共用一个var
+    // var a,b, c;
+
+    // 1. 局部变量：函数内部的声明
+    // function f() {
+    //     var str1 = "I'm a local"
+    //
+    // }
+    // alert(str1) //str1 is not defined
+
+
+    // var str2 = "I'm global"
+
+    function f1() {
+        // var str2 = 111
+        // alert(str2)
+        // //　不改变global variable
+        // str2 = 222
+
+        // 有待验证
+        var a = b = c = 1;
+        a = 1
+        b = 2
+        c = 3
+
+    }
+    f1()
+
+
+    alert(b)
+    alert(c)
+
+    // alert(str2)
+</script>
+</body>
+</html>

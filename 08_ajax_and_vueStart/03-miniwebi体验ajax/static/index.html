@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>首页 - 个人选股系统 V5.87</title>
+    <!--<base href="/">-->
+    <!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <!-- <script src="/js/bootstrap.min.js"></script> -->
+    <!-- <script src="js/vue.min.js"></script>
+    <script src="js/axios.min.js"></script> -->
+
+    <!-- 测试ajax的使用 -->
+    <script src="js/jquery-1.12.4.min.js"></script>
+    <script>
+        jQuery(document).ready(function () {
+
+            $.ajax({
+                // url: 'http://localhost:7890/index_data'
+                url: '/index_data', // 这个路径帮助我们获取所有股票信息
+                type: 'get',        // 提交类型
+                dataType: 'json',   // 返回值转换成对象
+                success: function (dat) {
+                    // console.log(dat)
+                    // 把所有内容拼接成一个字符串赋值给父标签的innerHTML => html()
+
+                    // a. 设置一个字符串变量，把表头信息设置进去
+                    // b. ｆｏｒ循环遍历出数组中的每一项，　生成多个的标签
+                    //　c.　把整个字符串里面的信息，添加到innerHTML属性中
+
+                    //a
+                    var str = '            <tr>\n' +
+                        '                <th>序号</th>\n' +
+                        '                <th>股票代码</th>\n' +
+                        '                <th>股票简称</th>\n' +
+                        '                <th>涨跌幅</th>\n' +
+                        '                <th>换手率</th>\n' +
+                        '                <th>最新价(元)</th>\n' +
+                        '                <th>前期高点</th>\n' +
+                        '                <th>前期高点日期</th>\n' +
+                        '                <th>添加自选</th>\n' +
+                        '            </tr>'
+
+                    for (var i = 0; i < dat.length; i++) {
+                        str += '            <tr>\n' +
+                            '                <td>' + dat[i].id + '</td>\n' +
+                            '                <td>' + dat[i].code + '</td>\n' +
+                            '                <td>' + dat[i].sname + '</td>\n' +
+                            '                <td>' + dat[i].rate01 + '</td>\n' +
+                            '                <td>' + dat[i].rate02 + '</td>\n' +
+                            '                <td>' + dat[i].new_prize + '</td>\n' +
+                            '                <td>' + dat[i].high + '</td>\n' +
+                            '                <td>' + dat[i].date + '</td>\n' +
+                            '                <td>\n' +
+                            '                    <input type="button" value="添加" name="toAdd" mycode="' + dat[i].code + '">\n' +
+                            '                </td>\n' +
+                            '            </tr>'
+                    }
+
+                    //c
+                    $(".table-hover").html(str)
+
+                },
+                error: function () {
+                    alert('web error')
+                }
+            })
+
+            // 需求２：　点击按钮，把数据添加到消息中心     ajax
+            // 事件绑定：　因为页面刚开始没有这些标签，是最后根据数据库中查找生成的
+            //              所以事件绑定要使用事件委托
+            $(".table-hover").on('click', 'input', function () {
+                // alert($(this))
+                // 获取自定义属性值：　attr()     表单属性：prop() 增强程序健壮性，以后就算更改
+                // alert($(this).attr('mycode'))
+
+                // ajax, 异步提交. 完成添加到个人中心
+                $.ajax({
+                    // url: 'http://localhost:7890/add_data'
+                    url: '/add_data',   // 这个路径添加关注
+                    type: 'get',
+                    dataType: 'text',   //提交的类型
+                    data: {'code': $(this).attr('mycode')}, //参数需要: {'code': '300268'}
+                    success: function () {
+                        alert(dat)
+                    },
+                    error: function () {
+                        alert('web error!')
+                    }
+                })
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+<div class="navbar navbar-inverse navbar-static-top ">
+    <div class="container">
+        <div class="navbar-header">
+            <button class="navbar-toggle" data-toggle="collapse" data-target="#mymenu">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="#" class="navbar-brand">选股系统</a>
+        </div>
+        <div class="collapse navbar-collapse" id="mymenu">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="">股票信息</a></li>
+                <li><a href="/center.html">个人中心</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container" id="container">
+
+    <div class="container-fluid">
+        <table class="table table-hover">
+
+
+            <!--            <tr>
+                            <th>序号</th>
+                            <th>股票代码</th>
+                            <th>股票简称</th>
+                            <th>涨跌幅</th>
+                            <th>换手率</th>
+                            <th>最新价(元)</th>
+                            <th>前期高点</th>
+                            <th>前期高点日期</th>
+                            <th>添加自选</th>
+                        </tr>-->
+            <!--            <tr>
+                            <td>1</td>
+                            <td>000007</td>
+                            <td>全新好</td>
+                            <td>10.01%</td>
+                            <td>4.40%</td>
+                            <td>全新好</td>
+                            <td>16.05</td>
+                            <td>2017-07-18</td>
+                            <td>
+                                <input type="button" value="添加" name="toAdd">
+                            </td>
+                        </tr>-->
+
+
+        </table>
+    </div>
+</div>
+
+</body>
+</html>            

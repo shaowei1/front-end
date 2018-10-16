@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .tab_con {
+            width: 500px;
+            height: 350px;
+            margin: 50px auto 0;
+        }
+
+        .tab_btns {
+            height: 50px;
+        }
+
+        .tab_btns input {
+            width: 100px;
+            height: 50px;
+            background: #ddd;
+            border: 0px;
+            font: 18px/50px 'simsun';
+            float: left;
+            cursor: pointer;
+            outline: none;
+        }
+
+        .tab_btns .active {
+            background: gold;
+        }
+
+        .tab_cons {
+            height: 300px;
+        }
+
+        .tab_cons div {
+            height: 300px;
+            line-height: 300px;
+            text-align: center;
+            display: none;
+            font-size: 30px;
+        }
+
+        .tab_cons .current {
+            display: block;
+            background: gold;
+        }
+    </style>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function () {
+            // Vue实现tab栏思路：1. 事件绑定
+            //    2.定义一个变量，添加active和current都根据这个变量
+            //    3.点击哪个input，　就把他的索引值赋值给这个变量
+            var vm = new Vue({
+                el: '.tab_con',
+
+                data: {
+                    index: 1,
+                },
+
+            })
+        }
+    </script>
+</head>
+<body>
+<div class="tab_con">
+    <div class="tab_btns">
+        <!--为每一个input绑定事件：把自己的索引值赋给index -->
+        <input type="button" value="button1" @click="index=1" :class="index==1?'active':''">
+        <input type="button" value="button2" @click="index=2" :class="index==2?'active':''">
+        <input type="button" value="button3" @click="index=3" :class="index==3?'active':''">
+        <input type="button" value="button4" @click="index=4" :class="index==4?'active':''">
+        <input type="button" value="button5" @click="index=5" :class="index==5?'active':''">
+
+
+    </div>
+    <div class="tab_cons">
+        <div :class="index==1?'current':''">button1's contents</div>
+        <div :class="index==2?'current':''">button2's contents</div>
+        <div :class="index==3?'current':''">button3's contents</div>
+        <div :class="index==4?'current':''">button4's contents</div>
+        <div :class="index==5?'current':''">button5's contents</div>
+    </div>
+</div>
+
+</body>
+</html>

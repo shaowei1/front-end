@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>06_事件驱动</title>
+    <script>
+        window.onload = function () {
+            // js是以事件驱动为核心的一门语言(原来是,知道google把v8从浏览器中抽取出来)
+            // 事件驱动三要素: 事件源/事件/事件驱动程序
+
+            // 获取事件源的标签
+            var div = document.getElementById('box1');
+            // 绑定事件(事件属性)-- 匿名函数绑定
+            /*            div.onclick = function () {
+                            //事件驱动程序
+                            alert("I was clicked");
+                        };*/
+
+            div.onclick = fn1;
+
+            function fn1() {
+                alert('I was also clicked')
+            }
+        };
+    </script>
+</head>
+<body>
+<div id="box1">我是div</div>
+</body>
+</html>

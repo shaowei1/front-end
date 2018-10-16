@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 300px;
+            height: 300px;
+            position: relative;
+            background: skyblue;
+        }
+    
+        .box2 {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            left: 400px;
+            background: yellowgreen;
+        }
+    
+        .box3 {
+            width: 100px;
+            height: 100px;
+            position: absolute;
+            left: 300px;
+            background: pink;
+        }
+    </style>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        jQuery(function(){
+            // 1.为三个盒子，绑定事件。
+            $(".box1").click(function(){
+                console.log('我是大盒子')
+            })
+            $(".box2").click(function(){
+                console.log('我是中盒子')
+            })
+            // 事件的传播，和盒子本身是否已经绑定事件没有关系。
+            $(".box3").click(function(event){
+                console.log('我是小盒子')
+                // 取消冒泡1：
+                // return false
+
+                // 阻止冒泡2:
+                event.stopPropagation()
+
+                // event.preventDefault()  // 阻止浏览器默认行为，不能取消冒泡。
+            })
+
+
+        })
+    </script>
+</head>
+<body>
+    <!-- 事件是可以传播的，子元素的事件被触发后，父元素的同一事件也会被自动触发。 -->
+    <!-- 事件冒泡: 子元素的事件触发后，父系盒子的同一事件也会被自动触发。 -->
+
+    <div class="box1">
+        <div class="box2">
+            <div class="box3"></div>
+        </div>
+    </div>
+
+
+
+</body>
+</html>

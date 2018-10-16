@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script>
+        // １．老式写话
+        $.ajax({
+            url: '/index_data',
+            type: 'get',
+            dataType: 'json',
+            data: {'code': '00000-7'},
+            success: function (dat) {
+                console.log(dat)
+            },
+            error: function () {
+                alert('web error')
+            },
+        })
+
+        // 2. 新式写法
+        $.ajax({
+            url: '/index_data',
+            type: 'get',
+            dataType: 'json',
+            data: {'code': '00000-7'},
+        })
+            .done(function (dat) {
+                console.log(dat)
+            })
+            .fail(function () {
+                console.log('web error!')
+            })
+
+        // 3. 形式写法 , 不会报错
+        $.get('index_data', {'code': '00000-7'}, function (dat) {
+                console.log(dat)
+            }
+        )
+        $.post('/index_data', {'code': '00000-7'}, function (dat) {
+            console.log(dat)
+        })
+    </script>
+</head>
+<body>
+
+</body>
+</html>

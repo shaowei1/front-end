@@ -1,0 +1,49 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 300px;
+            height: 300px;
+            background: skyblue;
+        }
+        .box2 {
+            width: 100px;
+            height: 100px;
+            text-align: center;
+            font: 34px/100px 'simsun';
+            background: yellowgreen;
+        }
+    </style>
+    <script src="js/vue.js"></script>
+    <script>
+        window.onload = function(){
+            // 定义vue对象
+            var vm = new Vue({
+                // 获取
+                el: ".box1",
+                // 设置变量
+                data: {
+                    num: 1,
+                }
+
+            })
+
+        }
+    </script>
+</head>
+<body>
+    <!-- vue中没有所谓的事件委托，所以事件冒泡就是哪来取消的... -->
+    <div class="box1" @click='num+=1'>
+        <!-- 点击里面的盒子的时候，不要产生是事件冒泡 -->
+        <!-- @.事件.stop：可以取消事件冒泡 -->
+        <!-- @.事件.prevent: 取消浏览器默认行为。 -->
+        <div class="box2" @click.stop.prevent='num+=1'> {{ num }} </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型上</title>
+    <style>
+        div {
+            /*width: 160px;*/
+            /*height: 160px;*/
+            width: 200px;
+            height: 200px;
+            background: green;
+
+            /*盒子的宽高: 宽/高+padding+border*/
+            /*1.padding: 内边距: 默认文字无法写到padding上,但是可以通过text-indent实现,有的logo就这样*/
+            /*text-indent: -20px;*/
+            padding: 10px;
+
+            /*2.border边线*/
+            /*粗细/类型 solid dotted dashed/颜色*/
+            border: 10px dashed red;
+
+            /*3.margin: 外边距:控制盒子之间的距离*/
+            /*margin: 100px;*/
+
+            /*4.css3给我们提供了一个属性,设置宽高的时候是包含padding和border的*/
+            box-sizing: border-box;
+
+            /*            5.扩展
+                            長度單位;　//就是給數字跟單位，單位可以是 em(字长)、px(像素)、pt 等値。
+
+                            很多标签,自带padding/margin/font/color...
+                            ul/ol/a/h1...body~*/
+        }
+        body {
+            /*去除默认的外边距*/
+            margin: 0px;
+        }
+    </style>
+</head>
+<body>
+<div>
+    故人西辞黄鹤楼,烟花三月下扬州<br>
+    孤帆远影碧空尽,唯见长江天际流
+</div>
+</body>
+</html>

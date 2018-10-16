@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        li {
+            font: 24px/34px 'simsun';
+            background: skyblue;
+            margin: 3px;
+            cursor: pointer;
+        }
+
+        .current {
+            background: yellowgreen;
+        }
+    </style>
+    <script src="js/jquery-1.11.1.js"></script>
+    <script>
+        $(function () {
+            $("button").click(function () {
+                // 1.电击button,创建一个li标签放入到ul中
+                // var str = '<li>' + "I'm a new li" + '</li>'
+                // $("ul").html($("ul").html() + str)
+
+                // 创建li标签，添加到ul中
+                var ul = document.getElementsByTagName('ul')[0]
+                var newLi = document.createElement('li')
+                newLi.className = 'current'
+                newLi.innerHTML = "I'm new li"
+                ul.appendChild(newLi)
+
+            })
+
+            // 2.给老元素li添加事件
+            // 新创建出的元素，没有老的事件
+            // $("li").click(function () {
+            //     alert("I'm li")
+            // })
+
+
+            // 事件委托
+            // $("ul").delegate('li', 'click', function () {
+            //     alert("我是事件委托")
+            // })
+
+            $('li').on('click', function () {
+                alert("333")
+            })
+
+            // 总结：
+            //１．事件委托：　a.事件委托的底层原理就是事件冒泡，ｂ．如果要绑定的事件元素会出现新元素就委托给你的新元素
+            // 2.　事件冒泡：　ａ．99%需要取消冒泡. b.事件委托的底层原理就是事件冒泡
+
+            // 1. 无委托事件：　click()        $('li').bind('click', function(){})
+            // 2. 有事件委托：　delegate()     on()
+        })
+    </script>
+</head>
+<body>
+<button>添加li标签</button>
+
+<ul>
+    <li>我是原生土著li1</li>
+    <li>我是原生土著li2</li>
+    <li>我是原生土著li3</li>
+</ul>
+
+</body>
+</html>

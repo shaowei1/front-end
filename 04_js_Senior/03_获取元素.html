@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>03_获取元素</title>
+    <script>
+        // js的加载和html是顺序加载,如果加载到js还没有html标签,那么就会获取null
+        // solve method: window.onload = function(){}   是入口函数
+
+        // 这是一个事件,当整个页面上,所有内容加载完毕的时候,才会执行这个函数
+        window.onload = function () {
+            var div1 = document.getElementById('box1');
+            console.log(div1);
+
+            //添加属性
+            div1.title = '我是div';
+            div1.id = 'aaa';
+
+            //通过标签获取元素(还可以根据类名/name)
+            var divArr = document.getElementsByTagName('div');
+            console.log(divArr)
+
+        };
+    </script>
+</head>
+<body>
+<div id="box1">我是div1</div>
+<div id="box2">我是div2</div>
+<div id="box3">我是div3</div>
+
+<!--<script>-->
+    <!--var div1 = document.getElementById('box1');-->
+    <!--console.log(div1);-->
+
+    <!--//添加属性,不可添加自己不具备的属性-->
+    <!--div1.title = '我是div1';-->
+    <!--div1.id = 'aaa1';-->
+<!--</script>-->
+</body>
+</html>

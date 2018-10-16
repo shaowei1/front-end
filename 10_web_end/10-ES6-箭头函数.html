@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        // 1.箭头函数定义
+        // var fn1 = a => a+1
+        // alert(fn1(2))
+
+        // var fn2 = ()=> '哈哈哈'
+        // alert(fn2())
+
+        // var fn3 = (a, b, c) => {
+        //     return a+b+c
+        // }
+        // alert(fn3(1,2,3))
+
+        var fn4 = (a, b, c ) => {
+            return a+b+c
+        }
+        // alert(fn4('yang', 'xin', 'yue'))
+
+        // 2.箭头函数的用途: 改变this的指向，指向函数外部的对象。
+        var obj1 = {
+            'name': '张三',
+            fn: function () {
+                var obj2 = new Object()
+                obj2.name = '李四'
+                // 改变this的指向     (call() / apply() / bind())
+                obj2.fn = () => {
+                    console.log(this)　// this 总是指向词法作用域，　也就是外层调用者obj
+                }
+                // 执行李四的方法
+                obj2.fn()
+                var fn1 = function () {
+                    return this     // this 指向window或undefined
+                }
+                console.log(fn1())
+
+            }
+        }
+
+        // 执行张三的fn    
+        obj1.fn()
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
